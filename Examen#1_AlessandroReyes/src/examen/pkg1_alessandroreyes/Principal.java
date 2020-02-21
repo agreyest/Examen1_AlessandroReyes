@@ -2,11 +2,18 @@ package examen.pkg1_alessandroreyes;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.SpinnerNumberModel;
 
 public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
+        SpinnerNumberModel YY = new SpinnerNumberModel();
+        YY.setMaximum(80);
+        YY.setMinimum(16);
+        YY.setValue(16);
+        js_e_edad.setModel(YY);
+        js_t_edad.setModel(YY);
     }
 
     /**
@@ -26,10 +33,77 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jd_crear = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        tf_e_nom = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        tf_e_carrera = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        tf_e_nat = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        tf_e_user = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        tf_e_pass = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        tf_e_numcu = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        tf_e_nivel = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        js_e_edad = new javax.swing.JSpinner();
+        btn_CE_r = new javax.swing.JButton();
+        btn_c_estu = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        tf_e_conocimiento = new javax.swing.JTextField();
         jd_Ctutor = new javax.swing.JDialog();
+        jLabel11 = new javax.swing.JLabel();
+        tf_t_nom = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        tf_t_carrera = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        tf_t_nat = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        tf_t_user = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        tf_t_pass = new javax.swing.JTextField();
+        tf_t_num = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        tf_t_nivel = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        js_t_edad = new javax.swing.JSpinner();
+        jLabel19 = new javax.swing.JLabel();
+        tf_t_ganancia = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        tf_t_dadas = new javax.swing.JTextField();
+        btn_CT_r = new javax.swing.JButton();
+        btn_c_tutor = new javax.swing.JButton();
         jd_Cexamen = new javax.swing.JDialog();
+        jLabel22 = new javax.swing.JLabel();
+        tf_ex_clase = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        tf_ex_tema = new javax.swing.JTextField();
+        tf_ex_conocimientor = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        tf_ex_puntaje = new javax.swing.JTextField();
+        btn_ex_r = new javax.swing.JButton();
+        btn_ex_crear = new javax.swing.JButton();
         jd_tutor = new javax.swing.JDialog();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jmi_t_mod = new javax.swing.JMenuItem();
+        jmi_t_listar = new javax.swing.JMenuItem();
+        jmi_dartuto = new javax.swing.JMenuItem();
+        jmi_t_logut = new javax.swing.JMenuItem();
         jd_estudiante = new javax.swing.JDialog();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jmi_mod = new javax.swing.JMenuItem();
+        jmi_listar = new javax.swing.JMenuItem();
+        jmi_EPendientes = new javax.swing.JMenuItem();
+        jmi_Eresueltos = new javax.swing.JMenuItem();
+        jmi_tutorias = new javax.swing.JMenuItem();
+        jmi_Hexamen = new javax.swing.JMenuItem();
+        jmi_e_logout = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         Login = new javax.swing.JMenu();
         Crear = new javax.swing.JMenu();
@@ -91,59 +165,392 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(79, 79, 79))
         );
 
+        jLabel3.setText("Nombre");
+
+        jLabel4.setText("Carrera");
+
+        jLabel5.setText("Lugar de nacimiento");
+
+        jLabel6.setText("Usuario");
+
+        jLabel7.setText("Contraseña");
+
+        jLabel8.setText("Numero de cuenta");
+
+        jLabel9.setText("Nivel de aprendizaje");
+
+        jLabel10.setText("Edad");
+
+        btn_CE_r.setText("Regresar");
+        btn_CE_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_CE_rMouseClicked(evt);
+            }
+        });
+
+        btn_c_estu.setText("Crear Estudiante");
+        btn_c_estu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_c_estuMouseClicked(evt);
+            }
+        });
+
+        jLabel21.setText("Conocimientos acumulados");
+
         javax.swing.GroupLayout jd_crearLayout = new javax.swing.GroupLayout(jd_crear.getContentPane());
         jd_crear.getContentPane().setLayout(jd_crearLayout);
         jd_crearLayout.setHorizontalGroup(
             jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 745, Short.MAX_VALUE)
+            .addGroup(jd_crearLayout.createSequentialGroup()
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(tf_e_pass)
+                    .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tf_e_user)
+                            .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(tf_e_nat)
+                                    .addComponent(tf_e_carrera, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_e_nom, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(jLabel6)))
+                        .addComponent(jLabel7)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_e_numcu)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(tf_e_nivel)
+                    .addComponent(jLabel10)
+                    .addComponent(js_e_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21)
+                    .addComponent(tf_e_conocimiento, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)))
+            .addGroup(jd_crearLayout.createSequentialGroup()
+                .addComponent(btn_CE_r, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 501, Short.MAX_VALUE)
+                .addComponent(btn_c_estu, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jd_crearLayout.setVerticalGroup(
             jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 539, Short.MAX_VALUE)
+            .addGroup(jd_crearLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_e_numcu, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_e_nom))
+                .addGap(18, 18, 18)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_e_nivel, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_e_carrera))
+                .addGap(18, 18, 18)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(js_e_edad, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_e_nat))
+                .addGap(18, 18, 18)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_e_conocimiento, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_e_user))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tf_e_pass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_c_estu, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(btn_CE_r, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
+
+        jLabel11.setText("Nombre");
+
+        jLabel12.setText("Carrera");
+
+        jLabel13.setText("Lugar de nacimiento");
+
+        jLabel14.setText("Usuario");
+
+        jLabel15.setText("Contraseña");
+
+        jLabel16.setText("Numero de cuenta");
+
+        jLabel17.setText("Nivel de enseñanza");
+
+        jLabel18.setText("Edad");
+
+        jLabel19.setText("Ganancia");
+
+        jLabel20.setText("tutorias dadas");
+
+        btn_CT_r.setText("Regresar");
+        btn_CT_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_CT_rMouseClicked(evt);
+            }
+        });
+
+        btn_c_tutor.setText("Crear tutor");
+        btn_c_tutor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_c_tutorMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_CtutorLayout = new javax.swing.GroupLayout(jd_Ctutor.getContentPane());
         jd_Ctutor.getContentPane().setLayout(jd_CtutorLayout);
         jd_CtutorLayout.setHorizontalGroup(
             jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jd_CtutorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_CtutorLayout.createSequentialGroup()
+                        .addComponent(btn_CT_r, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 416, Short.MAX_VALUE)
+                        .addComponent(btn_c_tutor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_CtutorLayout.createSequentialGroup()
+                        .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tf_t_pass)
+                            .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(tf_t_user)
+                                    .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(tf_t_nat, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                                            .addComponent(tf_t_nom, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel11)
+                                            .addComponent(jLabel12)
+                                            .addComponent(jLabel13)
+                                            .addComponent(tf_t_carrera))
+                                        .addComponent(jLabel14)))
+                                .addComponent(jLabel15)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_t_num)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel17)
+                            .addComponent(tf_t_nivel)
+                            .addComponent(jLabel18)
+                            .addComponent(js_t_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19)
+                            .addComponent(tf_t_ganancia)
+                            .addComponent(jLabel20)
+                            .addComponent(tf_t_dadas, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         jd_CtutorLayout.setVerticalGroup(
             jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_CtutorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_t_num, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_t_nom))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_t_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_t_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel18))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(js_t_edad, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_t_nat))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_t_ganancia, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_t_user))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_t_pass, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_t_dadas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addGroup(jd_CtutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_c_tutor, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(btn_CT_r, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
+
+        jLabel22.setText("De que clase es el Examen");
+
+        jLabel23.setText("Tema");
+
+        jLabel24.setText("Conocimiento requerido");
+
+        jLabel25.setText("Puntaje");
+
+        btn_ex_r.setText("Regresar");
+        btn_ex_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ex_rMouseClicked(evt);
+            }
+        });
+
+        btn_ex_crear.setText("Crear Examen");
+        btn_ex_crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ex_crearMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_CexamenLayout = new javax.swing.GroupLayout(jd_Cexamen.getContentPane());
         jd_Cexamen.getContentPane().setLayout(jd_CexamenLayout);
         jd_CexamenLayout.setHorizontalGroup(
             jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jd_CexamenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_CexamenLayout.createSequentialGroup()
+                        .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(tf_ex_conocimientor, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                                .addComponent(tf_ex_clase)
+                                .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel24))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_ex_tema)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel25)
+                            .addComponent(tf_ex_puntaje, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addGroup(jd_CexamenLayout.createSequentialGroup()
+                        .addComponent(btn_ex_r, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 429, Short.MAX_VALUE)
+                        .addComponent(btn_ex_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jd_CexamenLayout.setVerticalGroup(
             jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_CexamenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_ex_clase, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_ex_tema))
+                .addGap(174, 174, 174)
+                .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_ex_conocimientor, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_ex_puntaje))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addGroup(jd_CexamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_ex_crear, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(btn_ex_r, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
+
+        jMenu2.setText("Menu Acciones");
+
+        jmi_t_mod.setText("Modificar datos");
+        jMenu2.add(jmi_t_mod);
+
+        jmi_t_listar.setText("Listar Datos");
+        jMenu2.add(jmi_t_listar);
+
+        jmi_dartuto.setText("Dar tutoria");
+        jMenu2.add(jmi_dartuto);
+
+        jmi_t_logut.setText("Log out");
+        jmi_t_logut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_t_logutActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmi_t_logut);
+
+        jMenuBar3.add(jMenu2);
+
+        jd_tutor.setJMenuBar(jMenuBar3);
 
         javax.swing.GroupLayout jd_tutorLayout = new javax.swing.GroupLayout(jd_tutor.getContentPane());
         jd_tutor.getContentPane().setLayout(jd_tutorLayout);
         jd_tutorLayout.setHorizontalGroup(
             jd_tutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 738, Short.MAX_VALUE)
         );
         jd_tutorLayout.setVerticalGroup(
             jd_tutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 512, Short.MAX_VALUE)
         );
+
+        jMenu1.setText("Menu Acciones");
+
+        jmi_mod.setText("Modificar Datos");
+        jMenu1.add(jmi_mod);
+
+        jmi_listar.setText("Listar Datos");
+        jMenu1.add(jmi_listar);
+
+        jmi_EPendientes.setText("Ver Examenes pendientes");
+        jMenu1.add(jmi_EPendientes);
+
+        jmi_Eresueltos.setText("Ver Examenes resueltos");
+        jMenu1.add(jmi_Eresueltos);
+
+        jmi_tutorias.setText("Reservar tutorias");
+        jMenu1.add(jmi_tutorias);
+
+        jmi_Hexamen.setText("Hacer examen");
+        jMenu1.add(jmi_Hexamen);
+
+        jmi_e_logout.setText("Log out");
+        jmi_e_logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_e_logoutActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_e_logout);
+
+        jMenuBar2.add(jMenu1);
+
+        jd_estudiante.setJMenuBar(jMenuBar2);
 
         javax.swing.GroupLayout jd_estudianteLayout = new javax.swing.GroupLayout(jd_estudiante.getContentPane());
         jd_estudiante.getContentPane().setLayout(jd_estudianteLayout);
         jd_estudianteLayout.setHorizontalGroup(
             jd_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 743, Short.MAX_VALUE)
         );
         jd_estudianteLayout.setVerticalGroup(
             jd_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 517, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -167,9 +574,19 @@ public class Principal extends javax.swing.JFrame {
         Crear.add(jmi_Calumno);
 
         jmi_Ctutor.setText("Crear Tutor");
+        jmi_Ctutor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_CtutorActionPerformed(evt);
+            }
+        });
         Crear.add(jmi_Ctutor);
 
         jmi_Cexamen.setText("Crear Examen");
+        jmi_Cexamen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_CexamenActionPerformed(evt);
+            }
+        });
         Crear.add(jmi_Cexamen);
 
         jMenuBar1.add(Crear);
@@ -262,6 +679,171 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_loginMouseClicked
 
+    private void jmi_e_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_e_logoutActionPerformed
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
+        pf_pass.setText("");
+        tf_user.setText("");
+        jd_login.setModal(true);
+        jd_login.pack();
+        jd_login.setLocationRelativeTo(this);
+        jd_login.setVisible(true);
+    }//GEN-LAST:event_jmi_e_logoutActionPerformed
+
+    private void jmi_t_logutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_t_logutActionPerformed
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
+        pf_pass.setText("");
+        tf_user.setText("");
+        jd_login.setModal(true);
+        jd_login.pack();
+        jd_login.setLocationRelativeTo(this);
+        jd_login.setVisible(true);
+    }//GEN-LAST:event_jmi_t_logutActionPerformed
+
+    private void jmi_CtutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_CtutorActionPerformed
+        this.setVisible(false);
+        jd_Ctutor.setModal(true);
+        jd_Ctutor.pack();
+        jd_Ctutor.setLocationRelativeTo(this);
+        jd_Ctutor.setVisible(true);
+    }//GEN-LAST:event_jmi_CtutorActionPerformed
+
+    private void jmi_CexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_CexamenActionPerformed
+        this.setVisible(false);
+        jd_Cexamen.setModal(true);
+        jd_Cexamen.pack();
+        jd_Cexamen.setLocationRelativeTo(this);
+        jd_Cexamen.setVisible(true);
+    }//GEN-LAST:event_jmi_CexamenActionPerformed
+
+    private void btn_c_estuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_c_estuMouseClicked
+        try {
+            estudiantes.add(new Anormal(Integer.parseInt(tf_e_conocimiento.getText()), 
+                    Integer.parseInt(tf_e_nivel.getText()), tf_e_nom.getText(), tf_e_carrera.getText(), 
+                    tf_e_nat.getText(),tf_e_user.getText(), tf_e_pass.getText(), js_e_edad.getComponentCount(), 
+                    Integer.parseInt(tf_e_numcu.getText())));
+            JOptionPane.showMessageDialog(jd_crear, "Estudiante creado con exito.");
+            tf_e_conocimiento.setText("");
+            tf_e_carrera.setText("");
+            tf_e_nat.setText("");
+            tf_e_nivel.setText("");
+            tf_e_nom.setText("");
+            tf_e_numcu.setText("");
+            tf_e_pass.setText("");
+            tf_e_user.setText("");
+            js_e_edad.setValue(16);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(jd_crear, "Se produjo un error.");
+            tf_e_conocimiento.setText("");
+            tf_e_carrera.setText("");
+            tf_e_nat.setText("");
+            tf_e_nivel.setText("");
+            tf_e_nom.setText("");
+            tf_e_numcu.setText("");
+            tf_e_pass.setText("");
+            tf_e_user.setText("");
+            js_e_edad.setValue(16);
+        }
+    }//GEN-LAST:event_btn_c_estuMouseClicked
+
+    private void btn_CE_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CE_rMouseClicked
+        jd_crear.setModal(false);
+        jd_crear.setVisible(false);
+        tf_e_conocimiento.setText("");
+        tf_e_carrera.setText("");
+        tf_e_nat.setText("");
+        tf_e_nivel.setText("");
+        tf_e_nom.setText("");
+        tf_e_numcu.setText("");
+        tf_e_pass.setText("");
+        tf_e_user.setText("");
+        js_e_edad.setValue(16);
+        this.pack();
+        this.setLocationRelativeTo(this);
+        this.setVisible(true);
+    }//GEN-LAST:event_btn_CE_rMouseClicked
+
+    private void btn_c_tutorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_c_tutorMouseClicked
+        try {
+            tutor.add(new Tutor(Integer.parseInt(tf_t_ganancia.getText()), Integer.parseInt(tf_t_dadas.getText()), 
+                Integer.parseInt(tf_e_nivel.getText()), tf_t_nom.getText(), tf_t_carrera.getText(), 
+                tf_t_nat.getText(),tf_t_user.getText(), tf_t_pass.getText(), js_t_edad.getComponentCount(), 
+                Integer.parseInt(tf_t_num.getText())));
+            JOptionPane.showMessageDialog(jd_Ctutor, "Tutor creado con exito.");
+            tf_t_ganancia.setText("");
+            tf_t_carrera.setText("");
+            tf_t_nat.setText("");
+            tf_t_nivel.setText("");
+            tf_t_nom.setText("");
+            tf_t_num.setText("");
+            tf_t_pass.setText("");
+            tf_t_user.setText("");
+            js_t_edad.setValue(16);
+            tf_t_dadas.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(jd_Ctutor, "Se produjo un error.");
+            tf_t_ganancia.setText("");
+            tf_t_carrera.setText("");
+            tf_t_nat.setText("");
+            tf_t_nivel.setText("");
+            tf_t_nom.setText("");
+            tf_t_num.setText("");
+            tf_t_pass.setText("");
+            tf_t_user.setText("");
+            js_t_edad.setValue(16);
+            tf_t_dadas.setText("");
+        }
+    }//GEN-LAST:event_btn_c_tutorMouseClicked
+
+    private void btn_CT_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CT_rMouseClicked
+        jd_Ctutor.setModal(false);
+        jd_Ctutor.setVisible(false);
+        tf_t_ganancia.setText("");
+        tf_t_carrera.setText("");
+        tf_t_nat.setText("");
+        tf_t_nivel.setText("");
+        tf_t_nom.setText("");
+        tf_t_num.setText("");
+        tf_t_pass.setText("");
+        tf_t_user.setText("");
+        js_t_edad.setValue(16);
+        tf_t_dadas.setText("");
+        this.pack();
+        this.setLocationRelativeTo(this);
+        this.setVisible(true);
+    }//GEN-LAST:event_btn_CT_rMouseClicked
+
+    private void btn_ex_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ex_crearMouseClicked
+        try {
+            examenes.add(new Examen(tf_ex_clase.getText(), tf_ex_tema.getText(), 
+                    Integer.parseInt(tf_ex_conocimientor.getText()), Integer.parseInt(tf_ex_puntaje.getText())));
+            JOptionPane.showMessageDialog(jd_Cexamen, "Examen creado con exito.");
+            tf_ex_clase.setText("");
+            tf_ex_tema.setText(""); 
+            tf_ex_conocimientor.setText("");
+            tf_ex_puntaje.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(jd_Cexamen, "Hubo un error, intente de nuevo.");
+            tf_ex_clase.setText("");
+            tf_ex_tema.setText(""); 
+            tf_ex_conocimientor.setText("");
+            tf_ex_puntaje.setText("");
+        }
+    }//GEN-LAST:event_btn_ex_crearMouseClicked
+
+    private void btn_ex_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ex_rMouseClicked
+        jd_Cexamen.setModal(false);
+        jd_Cexamen.setVisible(false);
+        tf_ex_clase.setText("");
+        tf_ex_tema.setText("");
+        tf_ex_conocimientor.setText("");
+        tf_ex_puntaje.setText("");
+        this.pack();
+        this.setLocationRelativeTo(this);
+        this.setVisible(true);
+    }//GEN-LAST:event_btn_ex_rMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -300,11 +882,44 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Crear;
     private javax.swing.JMenu Login;
+    private javax.swing.JButton btn_CE_r;
+    private javax.swing.JButton btn_CT_r;
+    private javax.swing.JButton btn_c_estu;
+    private javax.swing.JButton btn_c_tutor;
+    private javax.swing.JButton btn_ex_crear;
+    private javax.swing.JButton btn_ex_r;
     private javax.swing.JButton btn_login;
     private javax.swing.JButton btn_r_log;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JDialog jd_Cexamen;
     private javax.swing.JDialog jd_Ctutor;
     private javax.swing.JDialog jd_crear;
@@ -314,7 +929,41 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_Calumno;
     private javax.swing.JMenuItem jmi_Cexamen;
     private javax.swing.JMenuItem jmi_Ctutor;
+    private javax.swing.JMenuItem jmi_EPendientes;
+    private javax.swing.JMenuItem jmi_Eresueltos;
+    private javax.swing.JMenuItem jmi_Hexamen;
+    private javax.swing.JMenuItem jmi_dartuto;
+    private javax.swing.JMenuItem jmi_e_logout;
+    private javax.swing.JMenuItem jmi_listar;
+    private javax.swing.JMenuItem jmi_mod;
+    private javax.swing.JMenuItem jmi_t_listar;
+    private javax.swing.JMenuItem jmi_t_logut;
+    private javax.swing.JMenuItem jmi_t_mod;
+    private javax.swing.JMenuItem jmi_tutorias;
+    private javax.swing.JSpinner js_e_edad;
+    private javax.swing.JSpinner js_t_edad;
     private javax.swing.JPasswordField pf_pass;
+    private javax.swing.JTextField tf_e_carrera;
+    private javax.swing.JTextField tf_e_conocimiento;
+    private javax.swing.JTextField tf_e_nat;
+    private javax.swing.JTextField tf_e_nivel;
+    private javax.swing.JTextField tf_e_nom;
+    private javax.swing.JTextField tf_e_numcu;
+    private javax.swing.JTextField tf_e_pass;
+    private javax.swing.JTextField tf_e_user;
+    private javax.swing.JTextField tf_ex_clase;
+    private javax.swing.JTextField tf_ex_conocimientor;
+    private javax.swing.JTextField tf_ex_puntaje;
+    private javax.swing.JTextField tf_ex_tema;
+    private javax.swing.JTextField tf_t_carrera;
+    private javax.swing.JTextField tf_t_dadas;
+    private javax.swing.JTextField tf_t_ganancia;
+    private javax.swing.JTextField tf_t_nat;
+    private javax.swing.JTextField tf_t_nivel;
+    private javax.swing.JTextField tf_t_nom;
+    private javax.swing.JTextField tf_t_num;
+    private javax.swing.JTextField tf_t_pass;
+    private javax.swing.JTextField tf_t_user;
     private javax.swing.JTextField tf_user;
     // End of variables declaration//GEN-END:variables
     ArrayList<Examen> examenes = new ArrayList();

@@ -6,14 +6,6 @@ public class Tutor extends Alumno{
     private ArrayList<String> listaclases; 
     private int ganancias, tutorías, nivel;
 
-    public Tutor(ArrayList<String> listaclases, int ganancias, int tutorías, int nivel, String nombre, String carrera, String lugarnat, String usuario, String contraseña, int edad, int númcuenta) {
-        super(nombre, carrera, lugarnat, usuario, contraseña, edad, númcuenta);
-        this.listaclases = listaclases;
-        this.ganancias = ganancias;
-        this.tutorías = tutorías;
-        this.nivel = nivel;
-    }
-
     public Tutor(int ganancias, int tutorías, int nivel, String nombre, String carrera, String lugarnat, String usuario, String contraseña, int edad, int númcuenta) {
         super(nombre, carrera, lugarnat, usuario, contraseña, edad, númcuenta);
         this.ganancias = ganancias;

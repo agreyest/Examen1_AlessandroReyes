@@ -12,6 +12,7 @@ public class Anormal extends Alumno{
         this.nivel = nivel;
     }
 
+    
     public int getConocimiento() {
         return conocimiento;
     }
