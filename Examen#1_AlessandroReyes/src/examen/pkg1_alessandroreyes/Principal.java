@@ -1,6 +1,8 @@
 package examen.pkg1_alessandroreyes;
 
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 
@@ -104,6 +106,32 @@ public class Principal extends javax.swing.JFrame {
         jmi_tutorias = new javax.swing.JMenuItem();
         jmi_Hexamen = new javax.swing.JMenuItem();
         jmi_e_logout = new javax.swing.JMenuItem();
+        jd_Ctutoria = new javax.swing.JDialog();
+        jLabel26 = new javax.swing.JLabel();
+        tf_tu_hora = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        tf_tu_aula = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        tf_tu_dia = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        tf_tu_clase = new javax.swing.JTextField();
+        tf_tu_mes = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        tf_tu_año = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        tf_tu_tema = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        cb_tu_tutor = new javax.swing.JComboBox<>();
+        btn_tu_r = new javax.swing.JButton();
+        btn_tu_crear = new javax.swing.JButton();
+        jd_reservar = new javax.swing.JDialog();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jl_tutoriasdisp = new javax.swing.JList<>();
+        jLabel34 = new javax.swing.JLabel();
+        btn_c_tutoria = new javax.swing.JButton();
+        btn_reservar_r = new javax.swing.JButton();
+        btn_reservar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Login = new javax.swing.JMenu();
         Crear = new javax.swing.JMenu();
@@ -525,6 +553,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.add(jmi_Eresueltos);
 
         jmi_tutorias.setText("Reservar tutorias");
+        jmi_tutorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_tutoriasActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmi_tutorias);
 
         jmi_Hexamen.setText("Hacer examen");
@@ -551,6 +584,170 @@ public class Principal extends javax.swing.JFrame {
         jd_estudianteLayout.setVerticalGroup(
             jd_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 517, Short.MAX_VALUE)
+        );
+
+        jLabel26.setText("Hora");
+
+        jLabel27.setText("Aula");
+
+        jLabel28.setText("Dia");
+
+        jLabel29.setText("Clase");
+
+        jLabel30.setText("Mes");
+
+        jLabel31.setText("AÑo");
+
+        jLabel32.setText("Tema");
+
+        jLabel33.setText("Tutor");
+
+        btn_tu_r.setText("Regresar");
+        btn_tu_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_tu_rMouseClicked(evt);
+            }
+        });
+
+        btn_tu_crear.setText("Crear tutoria");
+        btn_tu_crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_tu_crearMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_CtutoriaLayout = new javax.swing.GroupLayout(jd_Ctutoria.getContentPane());
+        jd_Ctutoria.getContentPane().setLayout(jd_CtutoriaLayout);
+        jd_CtutoriaLayout.setHorizontalGroup(
+            jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_CtutoriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_CtutoriaLayout.createSequentialGroup()
+                        .addComponent(btn_tu_r, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
+                        .addComponent(btn_tu_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_CtutoriaLayout.createSequentialGroup()
+                        .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tf_tu_clase, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                            .addComponent(tf_tu_aula, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_tu_hora, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_tu_dia)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_tu_mes)
+                            .addComponent(jLabel30)
+                            .addComponent(jLabel31)
+                            .addComponent(tf_tu_año)
+                            .addComponent(jLabel32)
+                            .addComponent(tf_tu_tema)
+                            .addComponent(jLabel33)
+                            .addComponent(cb_tu_tutor, 0, 280, Short.MAX_VALUE))))
+                .addContainerGap())
+        );
+        jd_CtutoriaLayout.setVerticalGroup(
+            jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_CtutoriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel30))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_tu_mes, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_tu_hora))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel31))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_tu_año, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_tu_aula))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel32))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_tu_tema, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(tf_tu_dia))
+                .addGap(18, 18, 18)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(jLabel33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_tu_clase, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(cb_tu_tutor))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                .addGroup(jd_CtutoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_tu_crear, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btn_tu_r, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jl_tutoriasdisp.setModel(new DefaultListModel());
+        jScrollPane1.setViewportView(jl_tutoriasdisp);
+
+        jLabel34.setText("Tutorias disponibles");
+
+        btn_c_tutoria.setText("Crear tutoria");
+        btn_c_tutoria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_c_tutoriaMouseClicked(evt);
+            }
+        });
+
+        btn_reservar_r.setText("Regresar");
+        btn_reservar_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_reservar_rMouseClicked(evt);
+            }
+        });
+
+        btn_reservar.setText("Reservar");
+
+        javax.swing.GroupLayout jd_reservarLayout = new javax.swing.GroupLayout(jd_reservar.getContentPane());
+        jd_reservar.getContentPane().setLayout(jd_reservarLayout);
+        jd_reservarLayout.setHorizontalGroup(
+            jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_reservarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_reservarLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jd_reservarLayout.createSequentialGroup()
+                                .addComponent(btn_c_tutoria)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jd_reservarLayout.createSequentialGroup()
+                                .addComponent(btn_reservar_r)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                                .addComponent(btn_reservar))))
+                    .addComponent(jLabel34))
+                .addContainerGap())
+        );
+        jd_reservarLayout.setVerticalGroup(
+            jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_reservarLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jLabel34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jd_reservarLayout.createSequentialGroup()
+                        .addComponent(btn_c_tutoria)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn_reservar_r)
+                            .addComponent(btn_reservar))))
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -844,6 +1041,91 @@ public class Principal extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_btn_ex_rMouseClicked
 
+    private void btn_tu_crearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_tu_crearMouseClicked
+        try {
+            Tutor temp = (Tutor) cb_tu_tutor.getSelectedItem();
+            tutorias.add(new Tutoria(tf_tu_hora.getText(), tf_tu_aula.getText(), tf_tu_dia.getText(),
+                    tf_tu_clase.getText(), tf_tu_mes.getText(), tf_tu_año.getText(), tf_tu_tema.getText(), temp));
+            JOptionPane.showMessageDialog(jd_Ctutoria, "Tutoria creada con exito");
+            tf_tu_hora.setText("");
+            tf_tu_aula.setText("");
+            tf_tu_dia.setText("");
+            tf_tu_clase.setText("");
+            tf_tu_mes.setText("");
+            tf_tu_año.setText("");
+            tf_tu_tema.setText("");
+            cb_tu_tutor.setSelectedIndex(0);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(jd_Ctutoria, "Ocurrio un error.");
+            tf_tu_hora.setText("");
+            tf_tu_aula.setText("");
+            tf_tu_dia.setText("");
+            tf_tu_clase.setText("");
+            tf_tu_mes.setText("");
+            tf_tu_año.setText("");
+            tf_tu_tema.setText("");
+            cb_tu_tutor.setSelectedIndex(0);
+        }
+
+    }//GEN-LAST:event_btn_tu_crearMouseClicked
+
+    private void btn_tu_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_tu_rMouseClicked
+        jd_Ctutoria.setModal(false);
+        jd_Ctutoria.setVisible(false);
+        
+        tf_tu_hora.setText("");
+        tf_tu_aula.setText("");
+        tf_tu_dia.setText("");
+        tf_tu_clase.setText("");
+        tf_tu_mes.setText("");
+        tf_tu_año.setText("");
+        tf_tu_tema.setText("");
+        jd_reservar.setModal(true);
+        jd_reservar.pack();
+        jd_reservar.setLocationRelativeTo(this);
+        jd_reservar.setVisible(true);
+    }//GEN-LAST:event_btn_tu_rMouseClicked
+
+    private void btn_c_tutoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_c_tutoriaMouseClicked
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel(tutor.toArray());
+        cb_tu_tutor.setModel(modelo);
+        
+        jd_reservar.setModal(false);
+        jd_reservar.setVisible(false);
+        jd_Ctutoria.setModal(true);
+        jd_Ctutoria.pack();
+        jd_Ctutoria.setLocationRelativeTo(this);
+        jd_Ctutoria.setVisible(true);
+    }//GEN-LAST:event_btn_c_tutoriaMouseClicked
+
+    private void jmi_tutoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_tutoriasActionPerformed
+        DefaultListModel m = (DefaultListModel) jl_tutoriasdisp.getModel();
+        for (int i = 0; i < tutorias.size(); i++) {
+            m.addElement(tutorias.get(i).toString());
+        }
+        jl_tutoriasdisp.setModel(m);
+        
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
+        jd_reservar.setModal(true);
+        jd_reservar.pack();
+        jd_reservar.setLocationRelativeTo(this);
+        jd_reservar.setVisible(true);
+    }//GEN-LAST:event_jmi_tutoriasActionPerformed
+
+    private void btn_reservar_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_reservar_rMouseClicked
+        jd_reservar.setModal(false);
+        jd_reservar.setVisible(false);
+        jd_estudiante.setModal(true);
+        jd_estudiante.pack();
+        jd_estudiante.setLocationRelativeTo(this);
+        jd_estudiante.setVisible(true);
+        
+        DefaultListModel m = (DefaultListModel) jl_tutoriasdisp.getModel();
+        m.removeAllElements();
+        jl_tutoriasdisp.setModel(m);
+    }//GEN-LAST:event_btn_reservar_rMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -886,10 +1168,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_CT_r;
     private javax.swing.JButton btn_c_estu;
     private javax.swing.JButton btn_c_tutor;
+    private javax.swing.JButton btn_c_tutoria;
     private javax.swing.JButton btn_ex_crear;
     private javax.swing.JButton btn_ex_r;
     private javax.swing.JButton btn_login;
     private javax.swing.JButton btn_r_log;
+    private javax.swing.JButton btn_reservar;
+    private javax.swing.JButton btn_reservar_r;
+    private javax.swing.JButton btn_tu_crear;
+    private javax.swing.JButton btn_tu_r;
+    private javax.swing.JComboBox<String> cb_tu_tutor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -908,7 +1196,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -920,12 +1217,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JDialog jd_Cexamen;
     private javax.swing.JDialog jd_Ctutor;
+    private javax.swing.JDialog jd_Ctutoria;
     private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_estudiante;
     private javax.swing.JDialog jd_login;
+    private javax.swing.JDialog jd_reservar;
     private javax.swing.JDialog jd_tutor;
+    private javax.swing.JList<String> jl_tutoriasdisp;
     private javax.swing.JMenuItem jmi_Calumno;
     private javax.swing.JMenuItem jmi_Cexamen;
     private javax.swing.JMenuItem jmi_Ctutor;
@@ -964,9 +1265,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_t_num;
     private javax.swing.JTextField tf_t_pass;
     private javax.swing.JTextField tf_t_user;
+    private javax.swing.JTextField tf_tu_aula;
+    private javax.swing.JTextField tf_tu_año;
+    private javax.swing.JTextField tf_tu_clase;
+    private javax.swing.JTextField tf_tu_dia;
+    private javax.swing.JTextField tf_tu_hora;
+    private javax.swing.JTextField tf_tu_mes;
+    private javax.swing.JTextField tf_tu_tema;
     private javax.swing.JTextField tf_user;
     // End of variables declaration//GEN-END:variables
     ArrayList<Examen> examenes = new ArrayList();
     ArrayList<Tutor> tutor = new ArrayList();
     ArrayList<Anormal> estudiantes = new ArrayList();
+    ArrayList<Tutoria> tutorias = new ArrayList();
 }
