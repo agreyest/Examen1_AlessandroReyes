@@ -12,6 +12,7 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
+        this.pack();
         SpinnerNumberModel YY = new SpinnerNumberModel();
         YY.setMaximum(80);
         YY.setMinimum(16);
@@ -21,7 +22,7 @@ public class Principal extends javax.swing.JFrame {
         //-----------------------------------------------------------------------------------------------------------
         estudiantes.add(new Anormal(111, 
                     11, "Alessandro Reyes", "SIstemas", 
-                    "Italia","Agreyes", "1234", 19, 
+                    "Italia","Agreyest", "1234", 19, 
                     11911224));
         estudiantes.add(new Anormal(111, 
                     11, "Alessandro Trimarchi", "SIstemas", 
@@ -1514,11 +1515,12 @@ public class Principal extends javax.swing.JFrame {
     private void btn_r_logMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_r_logMouseClicked
         jd_login.setModal(false);
         jd_login.setVisible(false);
-        pf_pass.setText("");
-        tf_user.setText("");
         this.pack();
         this.setLocationRelativeTo(this);
         this.setVisible(true);
+        
+        pf_pass.setText("");
+        tf_user.setText("");
     }//GEN-LAST:event_btn_r_logMouseClicked
 
     private void jmi_CalumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_CalumnoActionPerformed
@@ -1539,7 +1541,8 @@ public class Principal extends javax.swing.JFrame {
                     if (tf_user.getText().equals(tutor.get(i).getUsuario())
                             && pf_pass.getText().equals(tutor.get(i).getContraseña())) {
                         v = true;
-                        this.setVisible(false);
+                        jd_login.setModal(false);
+                        jd_login.setVisible(false);
                         jd_tutor.setModal(true);
                         jd_tutor.pack();
                         jd_tutor.setLocationRelativeTo(this);
@@ -1552,7 +1555,8 @@ public class Principal extends javax.swing.JFrame {
                     if (tf_user.getText().equals(estudiantes.get(i).getUsuario())
                             && pf_pass.getText().equals(estudiantes.get(i).getContraseña())) {
                         v = true;
-                        this.setVisible(false);
+                        jd_login.setModal(false);
+                        jd_login.setVisible(false);
                         jd_estudiante.setModal(true);
                         jd_estudiante.pack();
                         jd_estudiante.setLocationRelativeTo(this);
@@ -1577,10 +1581,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_loginMouseClicked
 
     private void jmi_e_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_e_logoutActionPerformed
-        jd_estudiante.setModal(false);
-        jd_estudiante.setVisible(false);
         pf_pass.setText("");
         tf_user.setText("");
+        
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
         jd_login.setModal(true);
         jd_login.pack();
         jd_login.setLocationRelativeTo(this);
@@ -1588,10 +1593,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmi_e_logoutActionPerformed
 
     private void jmi_t_logutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_t_logutActionPerformed
-        jd_tutor.setModal(false);
-        jd_tutor.setVisible(false);
         pf_pass.setText("");
         tf_user.setText("");
+        
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
         jd_login.setModal(true);
         jd_login.pack();
         jd_login.setLocationRelativeTo(this);
@@ -1886,6 +1892,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_dart_rMouseClicked
 
     private void jmi_listar_esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listar_esActionPerformed
+        DefaultTableModel m = (DefaultTableModel) jt_listar_es.getModel();
+        m.setRowCount(0);
+        jt_listar_es.setModel(m);
+        
         DefaultTableModel table1 = (DefaultTableModel) jt_listar_es.getModel();
         for (int i = 0; i < estudiantes.size(); i++) {
             Object[] newrow = {
@@ -1902,8 +1912,8 @@ public class Principal extends javax.swing.JFrame {
         }
         jt_listar_es.setModel(table1);
 
-        jd_tutor.setModal(false);
-        jd_tutor.setVisible(false);
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
         jd_listar_es.setModal(true);
         jd_listar_es.pack();
         jd_listar_es.setLocationRelativeTo(this);
@@ -1913,13 +1923,17 @@ public class Principal extends javax.swing.JFrame {
     private void btn_listarE_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_listarE_rMouseClicked
         jd_listar_es.setModal(false);
         jd_listar_es.setVisible(false);
-        jd_tutor.setModal(true);
-        jd_tutor.pack();
-        jd_tutor.setLocationRelativeTo(this);
-        jd_tutor.setVisible(true);
+        jd_estudiante.setModal(true);
+        jd_estudiante.pack();
+        jd_estudiante.setLocationRelativeTo(this);
+        jd_estudiante.setVisible(true);
     }//GEN-LAST:event_btn_listarE_rMouseClicked
 
     private void jmi_modActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modActionPerformed
+        DefaultTableModel m = (DefaultTableModel) jt_modE.getModel();
+        m.setRowCount(0);
+        jt_modE.setModel(m);
+        
         DefaultTableModel table1 = (DefaultTableModel) jt_modE.getModel();
         for (int i = 0; i < estudiantes.size(); i++) {
             Object[] newrow = {
@@ -1937,8 +1951,8 @@ public class Principal extends javax.swing.JFrame {
         }
         jt_modE.setModel(table1);
         
-        jd_tutor.setModal(false);
-        jd_tutor.setVisible(false);
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
         jd_modE.setModal(true);
         jd_modE.pack();
         jd_modE.setLocationRelativeTo(this);
@@ -1956,7 +1970,7 @@ public class Principal extends javax.swing.JFrame {
             tf_modE_cuenta.setText(Integer.toString(temp.getNúmcuenta()));
             tf_modE_pw.setText(temp.getContraseña());
             tf_modE_user.setText(temp.getUsuario());
-            tf_modE_pw.setText(Integer.toString(temp.getEdad()));
+            tf_modE_edad.setText(Integer.toString(temp.getEdad()));
         }else
             JOptionPane.showMessageDialog(jd_modE, "Seleccione uno de la tabla, para hacer esta opcion.");
     }//GEN-LAST:event_btn_vermodMouseClicked
@@ -1973,7 +1987,10 @@ public class Principal extends javax.swing.JFrame {
         estudiantes.get(jt_modE.getSelectedRow()).setNivel(Integer.parseInt(tf_modE_nivel.getText()));
         
         
-        jt_modE.removeAll();
+        DefaultTableModel m = (DefaultTableModel) jt_modE.getModel();
+        m.setRowCount(0);
+        jt_modE.setModel(m);
+        
         DefaultTableModel table1 = (DefaultTableModel) jt_modE.getModel();
         for (int i = 0; i < estudiantes.size(); i++) {
             Object[] newrow = {
@@ -2022,6 +2039,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_listarT_rMouseClicked
 
     private void jmi_t_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_t_listarActionPerformed
+        DefaultTableModel m = (DefaultTableModel) jt_listarT.getModel();
+        m.setRowCount(0);
+        jt_listarT.setModel(m);
+        
         DefaultTableModel table1 = (DefaultTableModel) jt_listarT.getModel();
         for (int i = 0; i < estudiantes.size(); i++) {
             Object[] newrow = {
@@ -2049,7 +2070,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmi_t_listarActionPerformed
 
     private void jmi_t_modActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_t_modActionPerformed
-        DefaultTableModel table1 = (DefaultTableModel) jt_listarT.getModel();
+        DefaultTableModel m = (DefaultTableModel) jt_modT.getModel();
+        m.setRowCount(0);
+        jt_modT.setModel(m);
+        
+        DefaultTableModel table1 = (DefaultTableModel) jt_modT.getModel();
         for (int i = 0; i < estudiantes.size(); i++) {
             Object[] newrow = {
                 tutor.get(i).getNombre(),
@@ -2065,7 +2090,7 @@ public class Principal extends javax.swing.JFrame {
             };
             table1.addRow(newrow);
         }
-        jt_listarT.setModel(table1);
+        jt_modT.setModel(table1);
         
         jd_tutor.setModal(false);
         jd_tutor.setVisible(false);
@@ -2104,7 +2129,10 @@ public class Principal extends javax.swing.JFrame {
         tutor.get(jt_modT.getSelectedRow()).setNivel(Integer.parseInt(tf_modE_nivel.getText()));
         tutor.get(jt_modT.getSelectedRow()).setTutorías(Integer.parseInt(tf_modT_dadas.getText()));
         
-        jt_modT.removeAll();
+        DefaultTableModel m = (DefaultTableModel) jt_modT.getModel();
+        m.setRowCount(0);
+        jt_modT.setModel(m);
+        
         DefaultTableModel table1 = (DefaultTableModel) jt_modT.getModel();
         for (int i = 0; i < estudiantes.size(); i++) {
             Object[] newrow = {
@@ -2149,7 +2177,7 @@ public class Principal extends javax.swing.JFrame {
         if(jl_tutoriasdisp.getSelectedIndex() >= 0){
             Anormal temp = null;
             for (int i = 0; i < estudiantes.size(); i++) {
-                if(estudiantes.get(i).getNombre().equals(tf_user.getText()) && 
+                if(estudiantes.get(i).getUsuario().equals(tf_user.getText()) && 
                         estudiantes.get(i).getContraseña().equals(pf_pass.getText())){
                     temp = estudiantes.get(i);
                     break;
@@ -2165,9 +2193,14 @@ public class Principal extends javax.swing.JFrame {
     private void jmi_HexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_HexamenActionPerformed
         DefaultListModel m = (DefaultListModel) jl_examen.getModel();
         for (int i = 0; i < examenes.size(); i++) {
-            if(examenes.get(i) != nor.get(i)){
+            if (nor.size() > 0) {
+                if (examenes.get(i) != nor.get(i)) {
+                    m.addElement(examenes.get(i).toString());
+                }
+            }else{
                 m.addElement(examenes.get(i).toString());
             }
+            
         }
         jl_examen.setModel(m);
         
@@ -2183,7 +2216,7 @@ public class Principal extends javax.swing.JFrame {
         if(jl_examen.getSelectedIndex() >=0){
             Anormal temp = null;
             for (int i = 0; i < estudiantes.size(); i++) {
-                if(estudiantes.get(i).getNombre().equals(tf_user.getText()) && 
+                if(estudiantes.get(i).getUsuario().equals(tf_user.getText()) && 
                         estudiantes.get(i).getContraseña().equals(pf_pass.getText())){
                     temp = estudiantes.get(i);
                     break;
@@ -2197,7 +2230,22 @@ public class Principal extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(jd_examen, "EL examen fue aprobado");
                 nor.add(examenes.get(jl_examen.getSelectedIndex()));
             }
-                
+            
+            DefaultListModel m = (DefaultListModel) jl_tutoriasdisp.getModel();
+            m.removeAllElements();
+            jl_tutoriasdisp.setModel(m);
+            DefaultListModel mo = (DefaultListModel) jl_examen.getModel();
+            for (int i = 0; i < examenes.size(); i++) {
+                if (nor.size() > 0) {
+                    if (examenes.get(i) != nor.get(i)) {
+                        mo.addElement(examenes.get(i).toString());
+                    }
+                } else {
+                    mo.addElement(examenes.get(i).toString());
+                }
+
+            }
+            jl_examen.setModel(mo);
         }
     }//GEN-LAST:event_btn_examenMouseClicked
 
@@ -2217,9 +2265,13 @@ public class Principal extends javax.swing.JFrame {
     private void jmi_EPendientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_EPendientesActionPerformed
         DefaultListModel m = (DefaultListModel) jl_EP.getModel();
         for (int i = 0; i < examenes.size(); i++) {
-            if(examenes.get(i) != nor.get(i)){
+            if (nor.size() > 0) {
+                if (examenes.get(i) != nor.get(i)) {
+                    m.addElement(examenes.get(i).toString());
+                }
+            }else
                 m.addElement(examenes.get(i).toString());
-            }
+            
         }
         jl_EP.setModel(m);
         
@@ -2244,19 +2296,23 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EP_rMouseClicked
 
     private void jmi_EresueltosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_EresueltosActionPerformed
-        DefaultListModel m = (DefaultListModel) jl_ER.getModel();
-        for (int i = 0; i < examenes.size(); i++) {
-            m.addElement(nor.get(i).toString());
-            
-        }
-        jl_ER.setModel(m);
-        
-        jd_estudiante.setModal(false);
-        jd_estudiante.setVisible(false);
-        jd_ER.setModal(true);
-        jd_ER.pack();
-        jd_ER.setLocationRelativeTo(this);
-        jd_ER.setVisible(true);
+        if (nor.size() > 0) {
+            DefaultListModel m = (DefaultListModel) jl_ER.getModel();
+            for (int i = 0; i < examenes.size(); i++) {
+                m.addElement(nor.get(i).toString());
+
+            }
+            jl_ER.setModel(m);
+
+            jd_estudiante.setModal(false);
+            jd_estudiante.setVisible(false);
+            jd_ER.setModal(true);
+            jd_ER.pack();
+            jd_ER.setLocationRelativeTo(this);
+            jd_ER.setVisible(true);
+        }else
+            JOptionPane.showMessageDialog(jd_estudiante, "No tiene examenes resueltos.");
+
     }//GEN-LAST:event_jmi_EresueltosActionPerformed
 
     private void btn_ER_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ER_rMouseClicked
