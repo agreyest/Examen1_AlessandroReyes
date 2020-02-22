@@ -49,5 +49,8 @@ public class Tutor extends Alumno{
         this.nivel = nivel;
     }
     
-    
+    @Override
+    public int Tutoria(){
+        return 30 ;
+    }
 }

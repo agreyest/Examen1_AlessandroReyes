@@ -802,6 +802,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btn_reservar.setText("Reservar");
+        btn_reservar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_reservarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_reservarLayout = new javax.swing.GroupLayout(jd_reservar.getContentPane());
         jd_reservar.getContentPane().setLayout(jd_reservarLayout);
@@ -1986,6 +1991,23 @@ public class Principal extends javax.swing.JFrame {
         jd_tutor.setLocationRelativeTo(this);
         jd_tutor.setVisible(true);
     }//GEN-LAST:event_btn_modT_rMouseClicked
+
+    private void btn_reservarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_reservarMouseClicked
+        if(jl_tutoriasdisp.getSelectedIndex() >= 0){
+            Anormal temp = null;
+            for (int i = 0; i < estudiantes.size(); i++) {
+                if(estudiantes.get(i).getNombre().equals(tf_user.getText()) && 
+                        estudiantes.get(i).getContraseña().equals(pf_pass.getText())){
+                    temp = estudiantes.get(i);
+                    break;
+                }
+                
+            }
+            tutorias.get(jl_tutoriasdisp.getSelectedIndex()).getAlumnos().add(temp);
+            JOptionPane.showMessageDialog(jd_reservar, "Reservacion hecha con exito.");
+        }else
+            JOptionPane.showMessageDialog(jd_reservar, "Seleccione que tutoria quiere reservar");
+    }//GEN-LAST:event_btn_reservarMouseClicked
 
     /**
      * @param args the command line arguments

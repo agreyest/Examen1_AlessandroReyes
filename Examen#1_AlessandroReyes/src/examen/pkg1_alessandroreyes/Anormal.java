@@ -37,4 +37,8 @@ public class Anormal extends Alumno{
         this.exámenesPR = exámenesPR;
     }
     
+    @Override
+    public int Tutoria(){
+        return 30 ;
+    }
 }

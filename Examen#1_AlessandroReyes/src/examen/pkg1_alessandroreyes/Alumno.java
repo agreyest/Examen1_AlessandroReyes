@@ -1,6 +1,6 @@
 package examen.pkg1_alessandroreyes;
 
-public class Alumno {
+public abstract class Alumno {
     private String nombre, carrera, lugarnat, usuario, contraseña; 
     private int edad, númcuenta; 
 
@@ -78,5 +78,6 @@ public class Alumno {
         return nombre + ", carrera: " + carrera + ", edad= " + edad;
     }
     
+    public abstract int Tutoria();
     
 }
