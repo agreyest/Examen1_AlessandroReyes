@@ -78,6 +78,6 @@ public abstract class Alumno {
         return nombre + ", carrera: " + carrera + ", edad= " + edad;
     }
     
-    public abstract int Tutoria();
+    public abstract void Tutoria();
     
 }

@@ -50,7 +50,8 @@ public class Tutor extends Alumno{
     }
     
     @Override
-    public int Tutoria(){
-        return 30 ;
+    public void Tutoria(){
+        setTutorías(tutorías+1);
+        setGanancias(ganancias+270);
     }
 }

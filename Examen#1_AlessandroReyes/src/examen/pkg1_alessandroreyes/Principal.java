@@ -198,6 +198,21 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         jt_listarT = new javax.swing.JTable();
         btn_listarT_r = new javax.swing.JButton();
+        jd_examen = new javax.swing.JDialog();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jl_examen = new javax.swing.JList<>();
+        btn_examen_r = new javax.swing.JButton();
+        btn_examen = new javax.swing.JButton();
+        jd_ER = new javax.swing.JDialog();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jl_ER = new javax.swing.JList<>();
+        btn_ER_r = new javax.swing.JButton();
+        jLabel55 = new javax.swing.JLabel();
+        jd_EP = new javax.swing.JDialog();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jl_EP = new javax.swing.JList<>();
+        btn_EP_r = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         Login = new javax.swing.JMenu();
         Crear = new javax.swing.JMenu();
@@ -638,9 +653,19 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.add(jmi_listar_es);
 
         jmi_EPendientes.setText("Ver Examenes pendientes");
+        jmi_EPendientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_EPendientesActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmi_EPendientes);
 
         jmi_Eresueltos.setText("Ver Examenes resueltos");
+        jmi_Eresueltos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_EresueltosActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmi_Eresueltos);
 
         jmi_tutorias.setText("Reservar tutorias");
@@ -652,6 +677,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.add(jmi_tutorias);
 
         jmi_Hexamen.setText("Hacer examen");
+        jmi_Hexamen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_HexamenActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmi_Hexamen);
 
         jmi_e_logout.setText("Log out");
@@ -1297,6 +1327,113 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btn_listarT_r, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jl_examen.setModel(new DefaultListModel());
+        jScrollPane7.setViewportView(jl_examen);
+
+        btn_examen_r.setText("Regresar");
+        btn_examen_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_examen_rMouseClicked(evt);
+            }
+        });
+
+        btn_examen.setText("Hacer examen");
+        btn_examen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_examenMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_examenLayout = new javax.swing.GroupLayout(jd_examen.getContentPane());
+        jd_examen.getContentPane().setLayout(jd_examenLayout);
+        jd_examenLayout.setHorizontalGroup(
+            jd_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_examenLayout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_examen_r)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                .addComponent(btn_examen)
+                .addContainerGap())
+        );
+        jd_examenLayout.setVerticalGroup(
+            jd_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
+            .addGroup(jd_examenLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jd_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_examen_r)
+                    .addComponent(btn_examen)))
+        );
+
+        jl_ER.setModel(new DefaultListModel());
+        jScrollPane8.setViewportView(jl_ER);
+
+        btn_ER_r.setText("Regresar");
+        btn_ER_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ER_rMouseClicked(evt);
+            }
+        });
+
+        jLabel55.setText("Examenes resueltos");
+
+        javax.swing.GroupLayout jd_ERLayout = new javax.swing.GroupLayout(jd_ER.getContentPane());
+        jd_ER.getContentPane().setLayout(jd_ERLayout);
+        jd_ERLayout.setHorizontalGroup(
+            jd_ERLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_ERLayout.createSequentialGroup()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_ERLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_ER_r)
+                    .addComponent(jLabel55))
+                .addGap(0, 272, Short.MAX_VALUE))
+        );
+        jd_ERLayout.setVerticalGroup(
+            jd_ERLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+            .addGroup(jd_ERLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_ER_r))
+        );
+
+        jl_EP.setModel(new DefaultListModel());
+        jScrollPane9.setViewportView(jl_EP);
+
+        btn_EP_r.setText("Regresar");
+        btn_EP_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_EP_rMouseClicked(evt);
+            }
+        });
+
+        jLabel56.setText("Examenes pendientes");
+
+        javax.swing.GroupLayout jd_EPLayout = new javax.swing.GroupLayout(jd_EP.getContentPane());
+        jd_EP.getContentPane().setLayout(jd_EPLayout);
+        jd_EPLayout.setHorizontalGroup(
+            jd_EPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_EPLayout.createSequentialGroup()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_EPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_EP_r)
+                    .addComponent(jLabel56))
+                .addGap(0, 284, Short.MAX_VALUE))
+        );
+        jd_EPLayout.setVerticalGroup(
+            jd_EPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
+            .addGroup(jd_EPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel56)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_EP_r))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Login.setText("Log in");
@@ -1405,6 +1542,7 @@ public class Principal extends javax.swing.JFrame {
                         jd_estudiante.pack();
                         jd_estudiante.setLocationRelativeTo(this);
                         jd_estudiante.setVisible(true);
+                        nor = new ArrayList();
                         break;
                     }
                 }
@@ -2009,6 +2147,115 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(jd_reservar, "Seleccione que tutoria quiere reservar");
     }//GEN-LAST:event_btn_reservarMouseClicked
 
+    private void jmi_HexamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_HexamenActionPerformed
+        DefaultListModel m = (DefaultListModel) jl_examen.getModel();
+        for (int i = 0; i < examenes.size(); i++) {
+            if(examenes.get(i) != nor.get(i)){
+                m.addElement(examenes.get(i).toString());
+            }
+        }
+        jl_examen.setModel(m);
+        
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
+        jd_examen.setModal(true);
+        jd_examen.pack();
+        jd_examen.setLocationRelativeTo(this);
+        jd_examen.setVisible(true);
+    }//GEN-LAST:event_jmi_HexamenActionPerformed
+
+    private void btn_examenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_examenMouseClicked
+        if(jl_examen.getSelectedIndex() >=0){
+            Anormal temp = null;
+            for (int i = 0; i < estudiantes.size(); i++) {
+                if(estudiantes.get(i).getNombre().equals(tf_user.getText()) && 
+                        estudiantes.get(i).getContraseña().equals(pf_pass.getText())){
+                    temp = estudiantes.get(i);
+                    break;
+                }
+                
+            }
+            if(examenes.get(jl_examen.getSelectedIndex()).getConocimientorequerido() >= temp.getConocimiento()){
+                JOptionPane.showMessageDialog(jd_examen, "EL examen fue repobrado");
+                nor.add(examenes.get(jl_examen.getSelectedIndex()));
+            }else{
+                JOptionPane.showMessageDialog(jd_examen, "EL examen fue aprobado");
+                nor.add(examenes.get(jl_examen.getSelectedIndex()));
+            }
+                
+        }
+    }//GEN-LAST:event_btn_examenMouseClicked
+
+    private void btn_examen_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_examen_rMouseClicked
+        jd_examen.setModal(false);
+        jd_examen.setVisible(false);
+        jd_estudiante.setModal(true);
+        jd_estudiante.pack();
+        jd_estudiante.setLocationRelativeTo(this);
+        jd_estudiante.setVisible(true);
+        
+        DefaultListModel m = (DefaultListModel) jl_tutoriasdisp.getModel();
+        m.removeAllElements();
+        jl_tutoriasdisp.setModel(m);
+    }//GEN-LAST:event_btn_examen_rMouseClicked
+
+    private void jmi_EPendientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_EPendientesActionPerformed
+        DefaultListModel m = (DefaultListModel) jl_EP.getModel();
+        for (int i = 0; i < examenes.size(); i++) {
+            if(examenes.get(i) != nor.get(i)){
+                m.addElement(examenes.get(i).toString());
+            }
+        }
+        jl_EP.setModel(m);
+        
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
+        jd_EP.setModal(true);
+        jd_EP.pack();
+        jd_EP.setLocationRelativeTo(this);
+        jd_EP.setVisible(true);
+    }//GEN-LAST:event_jmi_EPendientesActionPerformed
+
+    private void btn_EP_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EP_rMouseClicked
+        jd_EP.setModal(false);
+        jd_EP.setVisible(false);
+        jd_estudiante.setModal(true);
+        jd_estudiante.pack();
+        jd_estudiante.setLocationRelativeTo(this);
+        jd_estudiante.setVisible(true);
+        DefaultListModel m = (DefaultListModel) jl_EP.getModel();
+        m.removeAllElements();
+        jl_EP.setModel(m);
+    }//GEN-LAST:event_btn_EP_rMouseClicked
+
+    private void jmi_EresueltosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_EresueltosActionPerformed
+        DefaultListModel m = (DefaultListModel) jl_ER.getModel();
+        for (int i = 0; i < examenes.size(); i++) {
+            m.addElement(nor.get(i).toString());
+            
+        }
+        jl_ER.setModel(m);
+        
+        jd_estudiante.setModal(false);
+        jd_estudiante.setVisible(false);
+        jd_ER.setModal(true);
+        jd_ER.pack();
+        jd_ER.setLocationRelativeTo(this);
+        jd_ER.setVisible(true);
+    }//GEN-LAST:event_jmi_EresueltosActionPerformed
+
+    private void btn_ER_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ER_rMouseClicked
+        jd_EP.setModal(false);
+        jd_EP.setVisible(false);
+        jd_estudiante.setModal(true);
+        jd_estudiante.pack();
+        jd_estudiante.setLocationRelativeTo(this);
+        jd_estudiante.setVisible(true);
+        DefaultListModel m = (DefaultListModel) jl_ER.getModel();
+        m.removeAllElements();
+        jl_ER.setModel(m);
+    }//GEN-LAST:event_btn_ER_rMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2049,6 +2296,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu Login;
     private javax.swing.JButton btn_CE_r;
     private javax.swing.JButton btn_CT_r;
+    private javax.swing.JButton btn_EP_r;
+    private javax.swing.JButton btn_ER_r;
     private javax.swing.JButton btn_c_estu;
     private javax.swing.JButton btn_c_tutor;
     private javax.swing.JButton btn_c_tutoria;
@@ -2056,6 +2305,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dartuto;
     private javax.swing.JButton btn_ex_crear;
     private javax.swing.JButton btn_ex_r;
+    private javax.swing.JButton btn_examen;
+    private javax.swing.JButton btn_examen_r;
     private javax.swing.JButton btn_listarE_r;
     private javax.swing.JButton btn_listarT_r;
     private javax.swing.JButton btn_login;
@@ -2121,6 +2372,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2136,12 +2389,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JDialog jd_Cexamen;
     private javax.swing.JDialog jd_Ctutor;
     private javax.swing.JDialog jd_Ctutoria;
+    private javax.swing.JDialog jd_EP;
+    private javax.swing.JDialog jd_ER;
     private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_dartuto;
     private javax.swing.JDialog jd_estudiante;
+    private javax.swing.JDialog jd_examen;
     private javax.swing.JDialog jd_listarT;
     private javax.swing.JDialog jd_listar_es;
     private javax.swing.JDialog jd_login;
@@ -2149,7 +2408,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_modT;
     private javax.swing.JDialog jd_reservar;
     private javax.swing.JDialog jd_tutor;
+    private javax.swing.JList<String> jl_EP;
+    private javax.swing.JList<String> jl_ER;
     private javax.swing.JList<String> jl_dartutos;
+    private javax.swing.JList<String> jl_examen;
     private javax.swing.JList<String> jl_tutoriasdisp;
     private javax.swing.JMenuItem jmi_Calumno;
     private javax.swing.JMenuItem jmi_Cexamen;
@@ -2226,4 +2488,5 @@ public class Principal extends javax.swing.JFrame {
     ArrayList<Anormal> estudiantes = new ArrayList();
     ArrayList<Tutoria> tutorias = new ArrayList();
     Random random = new Random();
+    ArrayList<Examen> nor = new ArrayList();
 }
