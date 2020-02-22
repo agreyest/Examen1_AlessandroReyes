@@ -5,6 +5,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
+import java.util.Random;
 
 public class Principal extends javax.swing.JFrame {
 
@@ -132,6 +133,12 @@ public class Principal extends javax.swing.JFrame {
         btn_c_tutoria = new javax.swing.JButton();
         btn_reservar_r = new javax.swing.JButton();
         btn_reservar = new javax.swing.JButton();
+        jd_dartuto = new javax.swing.JDialog();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jl_dartutos = new javax.swing.JList<>();
+        jLabel35 = new javax.swing.JLabel();
+        btn_dart_r = new javax.swing.JButton();
+        btn_dartuto = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Login = new javax.swing.JMenu();
         Crear = new javax.swing.JMenu();
@@ -513,6 +520,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.add(jmi_t_listar);
 
         jmi_dartuto.setText("Dar tutoria");
+        jmi_dartuto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_dartutoActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_dartuto);
 
         jmi_t_logut.setText("Log out");
@@ -747,6 +759,55 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(jd_reservarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn_reservar_r)
                             .addComponent(btn_reservar))))
+                .addContainerGap())
+        );
+
+        jl_dartutos.setModel(new DefaultListModel());
+        jScrollPane2.setViewportView(jl_dartutos);
+
+        jLabel35.setText("Sus tutorias:");
+
+        btn_dart_r.setText("Regresar");
+
+        btn_dartuto.setText("Dar tutoria");
+        btn_dartuto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_dartutoMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_dartutoLayout = new javax.swing.GroupLayout(jd_dartuto.getContentPane());
+        jd_dartuto.getContentPane().setLayout(jd_dartutoLayout);
+        jd_dartutoLayout.setHorizontalGroup(
+            jd_dartutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_dartutoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_dartutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_dartutoLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_dart_r)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                        .addComponent(btn_dartuto))
+                    .addGroup(jd_dartutoLayout.createSequentialGroup()
+                        .addComponent(jLabel35)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jd_dartutoLayout.setVerticalGroup(
+            jd_dartutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_dartutoLayout.createSequentialGroup()
+                .addGroup(jd_dartutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jd_dartutoLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jd_dartutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn_dart_r)
+                            .addComponent(btn_dartuto)))
+                    .addGroup(jd_dartutoLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel35)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -1126,6 +1187,52 @@ public class Principal extends javax.swing.JFrame {
         jl_tutoriasdisp.setModel(m);
     }//GEN-LAST:event_btn_reservar_rMouseClicked
 
+    private void jmi_dartutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_dartutoActionPerformed
+        DefaultListModel m = (DefaultListModel) jl_dartutos.getModel();
+        for (int i = 0; i < tutorias.size(); i++) {
+            if(tutorias.get(i).getTutor().getUsuario().equals(tf_user.getText()) && 
+                    tutorias.get(i).getTutor().getContraseña().equals(pf_pass.getText()))
+                m.addElement(tutorias.get(i).toString());
+        }
+        jl_dartutos.setModel(m);
+        
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
+        jd_dartuto.setModal(true);
+        jd_dartuto.pack();
+        jd_dartuto.setLocationRelativeTo(this);
+        jd_dartuto.setVisible(true);
+    }//GEN-LAST:event_jmi_dartutoActionPerformed
+
+    private void btn_dartutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_dartutoMouseClicked
+        if(jl_dartutos.getSelectedIndex() >= 0){
+            try {
+                int con;
+                for (int i = 0; i < tutorias.get(jl_dartutos.getSelectedIndex()).getAlumnos().size(); i++) {
+                    int ran = 0 + random.nextInt(100);
+                    con = tutorias.get(jl_dartutos.getSelectedIndex()).getAlumnos().get(i).getConocimiento();
+                    tutorias.get(jl_dartutos.getSelectedIndex()).getAlumnos().get(i).setConocimiento(
+                            con + ran);
+                    JOptionPane.showMessageDialog(jd_dartuto, "se le ha acumulado " + ran + " de conocimiento a "
+                            + tutorias.get(jl_dartutos.getSelectedIndex()).getAlumnos().get(i).getNombre());
+                }
+                for (int i = 0; i < tutorias.size(); i++) {
+                    if (tutorias.get(i).getTutor().getUsuario().equals(tf_user.getText())
+                            && tutorias.get(i).getTutor().getContraseña().equals(pf_pass.getText())) {
+                        con = tutorias.get(i).getTutor().getGanancias();
+                        tutorias.get(i).getTutor().setGanancias(con + 270);
+                        JOptionPane.showMessageDialog(jd_dartuto, "Se le han agregado 270 lempiras a sus ganancias.");
+                        break;
+                    }
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(jd_dartuto, "Se produjo un error");
+            }
+            
+        } else
+            JOptionPane.showMessageDialog(jd_dartuto, "Seleccione una tutoria.");
+    }//GEN-LAST:event_btn_dartutoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1169,6 +1276,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_c_estu;
     private javax.swing.JButton btn_c_tutor;
     private javax.swing.JButton btn_c_tutoria;
+    private javax.swing.JButton btn_dart_r;
+    private javax.swing.JButton btn_dartuto;
     private javax.swing.JButton btn_ex_crear;
     private javax.swing.JButton btn_ex_r;
     private javax.swing.JButton btn_login;
@@ -1206,6 +1315,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1218,14 +1328,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JDialog jd_Cexamen;
     private javax.swing.JDialog jd_Ctutor;
     private javax.swing.JDialog jd_Ctutoria;
     private javax.swing.JDialog jd_crear;
+    private javax.swing.JDialog jd_dartuto;
     private javax.swing.JDialog jd_estudiante;
     private javax.swing.JDialog jd_login;
     private javax.swing.JDialog jd_reservar;
     private javax.swing.JDialog jd_tutor;
+    private javax.swing.JList<String> jl_dartutos;
     private javax.swing.JList<String> jl_tutoriasdisp;
     private javax.swing.JMenuItem jmi_Calumno;
     private javax.swing.JMenuItem jmi_Cexamen;
@@ -1278,4 +1391,5 @@ public class Principal extends javax.swing.JFrame {
     ArrayList<Tutor> tutor = new ArrayList();
     ArrayList<Anormal> estudiantes = new ArrayList();
     ArrayList<Tutoria> tutorias = new ArrayList();
+    Random random = new Random();
 }
