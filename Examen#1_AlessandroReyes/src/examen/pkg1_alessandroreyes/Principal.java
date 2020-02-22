@@ -6,6 +6,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 import java.util.Random;
+import javax.swing.table.DefaultTableModel;
 
 public class Principal extends javax.swing.JFrame {
 
@@ -101,7 +102,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmi_mod = new javax.swing.JMenuItem();
-        jmi_listar = new javax.swing.JMenuItem();
+        jmi_listar_es = new javax.swing.JMenuItem();
         jmi_EPendientes = new javax.swing.JMenuItem();
         jmi_Eresueltos = new javax.swing.JMenuItem();
         jmi_tutorias = new javax.swing.JMenuItem();
@@ -139,6 +140,34 @@ public class Principal extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         btn_dart_r = new javax.swing.JButton();
         btn_dartuto = new javax.swing.JButton();
+        jd_modE_user = new javax.swing.JDialog();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jt_modE = new javax.swing.JTable();
+        tf_modE_nom = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        tf_modE_edad = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        tf_modE_carrera = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        tf_modE_nat = new javax.swing.JTextField();
+        tf_modE_cuenta = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        tf_modE_user = new javax.swing.JTextField();
+        jLabel42 = new javax.swing.JLabel();
+        tf_modE_pw = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        tf_modE_cono = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        tf_modE_nivel = new javax.swing.JTextField();
+        btn_modE_r = new javax.swing.JButton();
+        btn_modE = new javax.swing.JButton();
+        btn_vermod = new javax.swing.JButton();
+        jd_listar_es = new javax.swing.JDialog();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jt_listar_es = new javax.swing.JTable();
+        btn_listarE_r = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Login = new javax.swing.JMenu();
         Crear = new javax.swing.JMenu();
@@ -553,10 +582,20 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.setText("Menu Acciones");
 
         jmi_mod.setText("Modificar Datos");
+        jmi_mod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_modActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmi_mod);
 
-        jmi_listar.setText("Listar Datos");
-        jMenu1.add(jmi_listar);
+        jmi_listar_es.setText("Listar Datos");
+        jmi_listar_es.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listar_esActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_listar_es);
 
         jmi_EPendientes.setText("Ver Examenes pendientes");
         jMenu1.add(jmi_EPendientes);
@@ -768,6 +807,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel35.setText("Sus tutorias:");
 
         btn_dart_r.setText("Regresar");
+        btn_dart_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_dart_rMouseClicked(evt);
+            }
+        });
 
         btn_dartuto.setText("Dar tutoria");
         btn_dartuto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -808,6 +852,196 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jLabel35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        jt_modE.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "Carrera ", "Lugar de nacimiento", "Cuenta", "Usuario", "Contraseña", "conocimiento", "Aprendizaje"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jt_modE);
+
+        jLabel36.setText("Nombre");
+
+        jLabel37.setText("Edad");
+
+        jLabel38.setText("Carrera");
+
+        jLabel39.setText("Lugar de nacimiento");
+
+        jLabel40.setText("Cuenta");
+
+        jLabel41.setText("Usuario");
+
+        jLabel42.setText("Contraseña");
+
+        jLabel43.setText("Conocimiento acumulado");
+
+        jLabel44.setText("Nivel de aprendizaje");
+
+        btn_modE_r.setText("Regresar");
+        btn_modE_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_modE_rMouseClicked(evt);
+            }
+        });
+
+        btn_modE.setText("Modificar");
+        btn_modE.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_modEMouseClicked(evt);
+            }
+        });
+
+        btn_vermod.setText("Ver seleccionado de la tabla");
+        btn_vermod.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_vermodMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_modE_userLayout = new javax.swing.GroupLayout(jd_modE_user.getContentPane());
+        jd_modE_user.getContentPane().setLayout(jd_modE_userLayout);
+        jd_modE_userLayout.setHorizontalGroup(
+            jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modE_userLayout.createSequentialGroup()
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_modE_carrera, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tf_modE_edad, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_modE_nom))
+                        .addComponent(jLabel38))
+                    .addComponent(jLabel39)
+                    .addComponent(tf_modE_nat)
+                    .addComponent(btn_modE_r, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(97, 97, 97)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_vermod)
+                    .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel40)
+                        .addComponent(tf_modE_cuenta)
+                        .addComponent(jLabel41)
+                        .addComponent(tf_modE_user)
+                        .addComponent(jLabel42)
+                        .addComponent(tf_modE_pw)
+                        .addComponent(jLabel43)
+                        .addComponent(tf_modE_cono, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_modE)
+                    .addComponent(jLabel44)
+                    .addComponent(tf_modE_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        jd_modE_userLayout.setVerticalGroup(
+            jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_modE_userLayout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel40)
+                    .addComponent(jLabel44))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modE_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modE_cuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modE_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel41))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modE_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modE_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel42))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modE_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modE_pw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(jLabel43))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modE_nat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modE_cono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_modE_r)
+                    .addComponent(btn_modE)
+                    .addComponent(btn_vermod)))
+        );
+
+        jt_listar_es.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "NOmbre", "Edad", "Carrera", "Lugar de nacimiento", "NUmero de cuenta", "Usuario", "Contraseña", "Conocimiento acumulado", "Nivel de aprendizaje"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(jt_listar_es);
+
+        btn_listarE_r.setText("Regresar");
+        btn_listarE_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_listarE_rMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_listar_esLayout = new javax.swing.GroupLayout(jd_listar_es.getContentPane());
+        jd_listar_es.getContentPane().setLayout(jd_listar_esLayout);
+        jd_listar_esLayout.setHorizontalGroup(
+            jd_listar_esLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
+            .addGroup(jd_listar_esLayout.createSequentialGroup()
+                .addComponent(btn_listarE_r)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jd_listar_esLayout.setVerticalGroup(
+            jd_listar_esLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_listar_esLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addComponent(btn_listarE_r)
                 .addContainerGap())
         );
 
@@ -1233,6 +1467,146 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(jd_dartuto, "Seleccione una tutoria.");
     }//GEN-LAST:event_btn_dartutoMouseClicked
 
+    private void btn_dart_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_dart_rMouseClicked
+        jd_dartuto.setModal(false);
+        jd_dartuto.setVisible(false);
+        jd_tutor.setModal(true);
+        jd_tutor.pack();
+        jd_tutor.setLocationRelativeTo(this);
+        jd_tutor.setVisible(true);
+        
+        DefaultListModel m = (DefaultListModel) jl_dartutos.getModel();
+        m.removeAllElements();
+        jl_dartutos.setModel(m);
+    }//GEN-LAST:event_btn_dart_rMouseClicked
+
+    private void jmi_listar_esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listar_esActionPerformed
+        DefaultTableModel table1 = (DefaultTableModel) jt_listar_es.getModel();
+        for (int i = 0; i < estudiantes.size(); i++) {
+            Object[] newrow = {
+                estudiantes.get(i).getNombre(),
+                estudiantes.get(i).getEdad(),
+                estudiantes.get(i).getCarrera(),
+                estudiantes.get(i).getLugarnat(),
+                estudiantes.get(i).getNúmcuenta(),
+                estudiantes.get(i).getUsuario(),
+                estudiantes.get(i).getContraseña(),
+                estudiantes.get(i).getConocimiento(),
+                estudiantes.get(i).getNivel(),};
+            table1.addRow(newrow);
+        }
+        jt_listar_es.setModel(table1);
+
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
+        jd_listar_es.setModal(true);
+        jd_listar_es.pack();
+        jd_listar_es.setLocationRelativeTo(this);
+        jd_listar_es.setVisible(true);
+    }//GEN-LAST:event_jmi_listar_esActionPerformed
+
+    private void btn_listarE_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_listarE_rMouseClicked
+        jd_listar_es.setModal(false);
+        jd_listar_es.setVisible(false);
+        jd_tutor.setModal(true);
+        jd_tutor.pack();
+        jd_tutor.setLocationRelativeTo(this);
+        jd_tutor.setVisible(true);
+    }//GEN-LAST:event_btn_listarE_rMouseClicked
+
+    private void jmi_modActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_modActionPerformed
+        DefaultTableModel table1 = (DefaultTableModel) jt_modE.getModel();
+        for (int i = 0; i < estudiantes.size(); i++) {
+            Object[] newrow = {
+                estudiantes.get(i).getNombre(),
+                estudiantes.get(i).getEdad(),
+                estudiantes.get(i).getCarrera(),
+                estudiantes.get(i).getLugarnat(),
+                estudiantes.get(i).getNúmcuenta(),
+                estudiantes.get(i).getUsuario(),
+                estudiantes.get(i).getContraseña(),
+                estudiantes.get(i).getConocimiento(),
+                estudiantes.get(i).getNivel(),
+            };
+            table1.addRow(newrow);
+        }
+        jt_modE.setModel(table1);
+        
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
+        jd_modE_user.setModal(true);
+        jd_modE_user.pack();
+        jd_modE_user.setLocationRelativeTo(this);
+        jd_modE_user.setVisible(true);
+    }//GEN-LAST:event_jmi_modActionPerformed
+
+    private void btn_vermodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_vermodMouseClicked
+        if(jt_modE.getSelectedRow() >=0){
+            Anormal temp = estudiantes.get(jt_modE.getSelectedRow());
+            tf_modE_cono.setText(Integer.toString(temp.getConocimiento()));
+            tf_modE_carrera.setText(temp.getCarrera());
+            tf_modE_nat.setText(temp.getLugarnat());
+            tf_modE_nivel.setText(Integer.toString(temp.getNivel()));
+            tf_modE_nom.setText(temp.getNombre());
+            tf_modE_cuenta.setText(Integer.toString(temp.getNúmcuenta()));
+            tf_modE_pw.setText(temp.getContraseña());
+            tf_modE_user.setText(temp.getUsuario());
+            tf_modE_pw.setText(Integer.toString(temp.getEdad()));
+        }else
+            JOptionPane.showMessageDialog(jd_modE_user, "Seleccione uno de la tabla, para hacer esta opcion.");
+    }//GEN-LAST:event_btn_vermodMouseClicked
+
+    private void btn_modEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modEMouseClicked
+        estudiantes.get(jt_modE.getSelectedRow()).setNombre(tf_modE_nom.getText());
+        estudiantes.get(jt_modE.getSelectedRow()).setEdad(Integer.parseInt(tf_modE_edad.getText()));
+        estudiantes.get(jt_modE.getSelectedRow()).setCarrera(tf_modE_carrera.getText());
+        estudiantes.get(jt_modE.getSelectedRow()).setLugarnat(tf_modE_nat.getText());
+        estudiantes.get(jt_modE.getSelectedRow()).setNúmcuenta(Integer.parseInt(tf_modE_cuenta.getText()));
+        estudiantes.get(jt_modE.getSelectedRow()).setUsuario(tf_modE_user.getText());
+        estudiantes.get(jt_modE.getSelectedRow()).setContraseña(tf_modE_pw.getText());
+        estudiantes.get(jt_modE.getSelectedRow()).setConocimiento(Integer.parseInt(tf_modE_cono.getText()));
+        estudiantes.get(jt_modE.getSelectedRow()).setNivel(Integer.parseInt(tf_modE_nivel.getText()));
+        
+        
+        jt_modE.removeAll();
+        DefaultTableModel table1 = (DefaultTableModel) jt_modE.getModel();
+        for (int i = 0; i < estudiantes.size(); i++) {
+            Object[] newrow = {
+                estudiantes.get(i).getNombre(),
+                estudiantes.get(i).getEdad(),
+                estudiantes.get(i).getCarrera(),
+                estudiantes.get(i).getLugarnat(),
+                estudiantes.get(i).getNúmcuenta(),
+                estudiantes.get(i).getUsuario(),
+                estudiantes.get(i).getContraseña(),
+                estudiantes.get(i).getConocimiento(),
+                estudiantes.get(i).getNivel(),
+            };
+            table1.addRow(newrow);
+        }
+        jt_modE.setModel(table1);
+    }//GEN-LAST:event_btn_modEMouseClicked
+
+    private void btn_modE_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modE_rMouseClicked
+        jd_modE_user.setModal(false);
+        jd_modE_user.setVisible(false);
+       
+        tf_modE_cono.setText("");
+        tf_modE_carrera.setText("");
+        tf_modE_nat.setText("");
+        tf_modE_nivel.setText("");
+        tf_modE_nom.setText("");
+        tf_modE_cuenta.setText("");
+        tf_modE_pw.setText("");
+        tf_modE_user.setText("");
+        tf_modE_pw.setText("");
+
+        jd_tutor.setModal(true);
+        jd_tutor.pack();
+        jd_tutor.setLocationRelativeTo(this);
+        jd_tutor.setVisible(true);
+    }//GEN-LAST:event_btn_modE_rMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1280,12 +1654,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_dartuto;
     private javax.swing.JButton btn_ex_crear;
     private javax.swing.JButton btn_ex_r;
+    private javax.swing.JButton btn_listarE_r;
     private javax.swing.JButton btn_login;
+    private javax.swing.JButton btn_modE;
+    private javax.swing.JButton btn_modE_r;
     private javax.swing.JButton btn_r_log;
     private javax.swing.JButton btn_reservar;
     private javax.swing.JButton btn_reservar_r;
     private javax.swing.JButton btn_tu_crear;
     private javax.swing.JButton btn_tu_r;
+    private javax.swing.JButton btn_vermod;
     private javax.swing.JComboBox<String> cb_tu_tutor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1316,7 +1694,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1329,13 +1716,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JDialog jd_Cexamen;
     private javax.swing.JDialog jd_Ctutor;
     private javax.swing.JDialog jd_Ctutoria;
     private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_dartuto;
     private javax.swing.JDialog jd_estudiante;
+    private javax.swing.JDialog jd_listar_es;
     private javax.swing.JDialog jd_login;
+    private javax.swing.JDialog jd_modE_user;
     private javax.swing.JDialog jd_reservar;
     private javax.swing.JDialog jd_tutor;
     private javax.swing.JList<String> jl_dartutos;
@@ -1348,7 +1739,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_Hexamen;
     private javax.swing.JMenuItem jmi_dartuto;
     private javax.swing.JMenuItem jmi_e_logout;
-    private javax.swing.JMenuItem jmi_listar;
+    private javax.swing.JMenuItem jmi_listar_es;
     private javax.swing.JMenuItem jmi_mod;
     private javax.swing.JMenuItem jmi_t_listar;
     private javax.swing.JMenuItem jmi_t_logut;
@@ -1356,6 +1747,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_tutorias;
     private javax.swing.JSpinner js_e_edad;
     private javax.swing.JSpinner js_t_edad;
+    private javax.swing.JTable jt_listar_es;
+    private javax.swing.JTable jt_modE;
     private javax.swing.JPasswordField pf_pass;
     private javax.swing.JTextField tf_e_carrera;
     private javax.swing.JTextField tf_e_conocimiento;
@@ -1369,6 +1762,15 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_ex_conocimientor;
     private javax.swing.JTextField tf_ex_puntaje;
     private javax.swing.JTextField tf_ex_tema;
+    private javax.swing.JTextField tf_modE_carrera;
+    private javax.swing.JTextField tf_modE_cono;
+    private javax.swing.JTextField tf_modE_cuenta;
+    private javax.swing.JTextField tf_modE_edad;
+    private javax.swing.JTextField tf_modE_nat;
+    private javax.swing.JTextField tf_modE_nivel;
+    private javax.swing.JTextField tf_modE_nom;
+    private javax.swing.JTextField tf_modE_pw;
+    private javax.swing.JTextField tf_modE_user;
     private javax.swing.JTextField tf_t_carrera;
     private javax.swing.JTextField tf_t_dadas;
     private javax.swing.JTextField tf_t_ganancia;

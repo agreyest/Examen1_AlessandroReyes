@@ -663,11 +663,17 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar Datos"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmi_modActionPerformed"/>
+                  </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jmi_listar">
+                <MenuItem class="javax.swing.JMenuItem" name="jmi_listar_es">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Listar Datos"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmi_listar_esActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jmi_EPendientes">
                   <Properties>
@@ -1058,6 +1064,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Regresar"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_dart_rMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_dartuto">
           <Properties>
@@ -1065,6 +1074,285 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_dartutoMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="jd_modE_user">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="tf_modE_carrera" alignment="1" max="32767" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="tf_modE_edad" pref="195" max="32767" attributes="0"/>
+                              <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="tf_modE_nom" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_nat" max="32767" attributes="0"/>
+                      <Component id="btn_modE_r" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btn_vermod" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_modE_cuenta" max="32767" attributes="0"/>
+                          <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_modE_user" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel42" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_modE_pw" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_modE_cono" alignment="0" pref="195" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="72" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btn_modE" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_nivel" min="-2" pref="186" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jScrollPane4" min="-2" pref="233" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_modE_nom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_cuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_nivel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_modE_edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_user" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_modE_carrera" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_pw" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tf_modE_nat" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_modE_cono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_modE_r" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_modE" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_vermod" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jt_modE">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="9" rowCount="0">
+                    <Column editable="true" title="Nombre" type="java.lang.String"/>
+                    <Column editable="true" title="Edad" type="java.lang.Integer"/>
+                    <Column editable="true" title="Carrera " type="java.lang.String"/>
+                    <Column editable="true" title="Lugar de nacimiento" type="java.lang.String"/>
+                    <Column editable="true" title="Cuenta" type="java.lang.Integer"/>
+                    <Column editable="true" title="Usuario" type="java.lang.String"/>
+                    <Column editable="true" title="Contrase&#xf1;a" type="java.lang.String"/>
+                    <Column editable="true" title="conocimiento" type="java.lang.Integer"/>
+                    <Column editable="true" title="Aprendizaje" type="java.lang.Integer"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JTextField" name="tf_modE_nom">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel36">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel37">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edad"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_edad">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel38">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Carrera"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_carrera">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel39">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lugar de nacimiento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_nat">
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_cuenta">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel40">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel41">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Usuario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_user">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel42">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_pw">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel43">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Conocimiento acumulado"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_cono">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel44">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nivel de aprendizaje"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="tf_modE_nivel">
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_modE_r">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Regresar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_modE_rMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_modE">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modificar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_modEMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_vermod">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ver seleccionado de la tabla"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_vermodMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="jd_listar_es">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jScrollPane3" pref="765" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Component id="btn_listarE_r" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="413" max="-2" attributes="0"/>
+                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                  <Component id="btn_listarE_r" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jt_listar_es">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="9" rowCount="0">
+                    <Column editable="false" title="NOmbre" type="java.lang.String"/>
+                    <Column editable="false" title="Edad" type="java.lang.Integer"/>
+                    <Column editable="false" title="Carrera" type="java.lang.String"/>
+                    <Column editable="false" title="Lugar de nacimiento" type="java.lang.String"/>
+                    <Column editable="false" title="NUmero de cuenta" type="java.lang.Integer"/>
+                    <Column editable="false" title="Usuario" type="java.lang.String"/>
+                    <Column editable="false" title="Contrase&#xf1;a" type="java.lang.String"/>
+                    <Column editable="false" title="Conocimiento acumulado" type="java.lang.Integer"/>
+                    <Column editable="false" title="Nivel de aprendizaje" type="java.lang.Integer"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="btn_listarE_r">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Regresar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_listarE_rMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
