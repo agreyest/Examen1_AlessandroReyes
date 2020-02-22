@@ -18,6 +18,21 @@ public class Principal extends javax.swing.JFrame {
         YY.setValue(16);
         js_e_edad.setModel(YY);
         js_t_edad.setModel(YY);
+        //-----------------------------------------------------------------------------------------------------------
+        estudiantes.add(new Anormal(111, 
+                    11, "Alessandro Reyes", "SIstemas", 
+                    "Italia","Agreyes", "1234", 19, 
+                    11911224));
+        estudiantes.add(new Anormal(111, 
+                    11, "Alessandro Trimarchi", "SIstemas", 
+                    "Honduras","Agreyes", "1111", 19, 
+                    1191224));
+        tutor.add(new Tutor(3000, 111, 
+                1000, "Diego", "Sistemas", 
+                "Honduras","dieg", "2222", 24, 
+                11168727));
+        examenes.add(new Examen("Trigo", "Volumenes", 
+                    100, 80));
     }
 
     /**
