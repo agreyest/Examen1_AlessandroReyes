@@ -140,7 +140,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         btn_dart_r = new javax.swing.JButton();
         btn_dartuto = new javax.swing.JButton();
-        jd_modE_user = new javax.swing.JDialog();
+        jd_modE = new javax.swing.JDialog();
         jScrollPane4 = new javax.swing.JScrollPane();
         jt_modE = new javax.swing.JTable();
         tf_modE_nom = new javax.swing.JTextField();
@@ -168,6 +168,36 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jt_listar_es = new javax.swing.JTable();
         btn_listarE_r = new javax.swing.JButton();
+        jd_modT = new javax.swing.JDialog();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jt_modT = new javax.swing.JTable();
+        tf_modT_nom = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        tf_modT_edad = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        tf_modT_carrera = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        tf_modT_nat = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        tf_modT_num = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        tf_modT_user = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
+        tf_modT_pw = new javax.swing.JTextField();
+        tf_modT_ganancias = new javax.swing.JTextField();
+        tf_modT_dadas = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        tf_modT_nivel = new javax.swing.JTextField();
+        btn_modT_r = new javax.swing.JButton();
+        btn_modT_ver = new javax.swing.JButton();
+        btn_modT = new javax.swing.JButton();
+        jd_listarT = new javax.swing.JDialog();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jt_listarT = new javax.swing.JTable();
+        btn_listarT_r = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Login = new javax.swing.JMenu();
         Crear = new javax.swing.JMenu();
@@ -543,9 +573,19 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.setText("Menu Acciones");
 
         jmi_t_mod.setText("Modificar datos");
+        jmi_t_mod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_t_modActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_t_mod);
 
         jmi_t_listar.setText("Listar Datos");
+        jmi_t_listar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_t_listarActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_t_listar);
 
         jmi_dartuto.setText("Dar tutoria");
@@ -912,16 +952,16 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jd_modE_userLayout = new javax.swing.GroupLayout(jd_modE_user.getContentPane());
-        jd_modE_user.getContentPane().setLayout(jd_modE_userLayout);
-        jd_modE_userLayout.setHorizontalGroup(
-            jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jd_modELayout = new javax.swing.GroupLayout(jd_modE.getContentPane());
+        jd_modE.getContentPane().setLayout(jd_modELayout);
+        jd_modELayout.setHorizontalGroup(
+            jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane4)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modE_userLayout.createSequentialGroup()
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modELayout.createSequentialGroup()
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tf_modE_carrera, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(tf_modE_edad, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                             .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.LEADING)
@@ -931,9 +971,9 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tf_modE_nat)
                     .addComponent(btn_modE_r, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(97, 97, 97)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_vermod)
-                    .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel40)
                         .addComponent(tf_modE_cuenta)
                         .addComponent(jLabel41)
@@ -943,52 +983,52 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jLabel43)
                         .addComponent(tf_modE_cono, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_modE)
                     .addComponent(jLabel44)
                     .addComponent(tf_modE_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        jd_modE_userLayout.setVerticalGroup(
-            jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_modE_userLayout.createSequentialGroup()
+        jd_modELayout.setVerticalGroup(
+            jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_modELayout.createSequentialGroup()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
                     .addComponent(jLabel40)
                     .addComponent(jLabel44))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_modE_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_modE_cuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_modE_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
                     .addComponent(jLabel41))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_modE_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_modE_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
                     .addComponent(jLabel42))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_modE_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_modE_pw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
                     .addComponent(jLabel43))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_modE_nat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(tf_modE_cono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(jd_modE_userLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_modELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_modE_r)
                     .addComponent(btn_modE)
                     .addComponent(btn_vermod)))
@@ -1043,6 +1083,213 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addComponent(btn_listarE_r)
                 .addContainerGap())
+        );
+
+        jt_modT.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "Carrera", "Lugar de nacimiento", "Cuenta", "Usuario ", "Contraseña", "Ganancias", "Tutorias dadas", "Nivel de enseñanza"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane6.setViewportView(jt_modT);
+
+        jLabel45.setText("Nombre");
+
+        jLabel46.setText("Edad");
+
+        jLabel47.setText("Carrera");
+
+        jLabel48.setText("Lugar de nacimiento");
+
+        jLabel49.setText("Numero de cuenta");
+
+        jLabel50.setText("Usuario");
+
+        jLabel51.setText("Contraseña");
+
+        jLabel52.setText("Ganancias");
+
+        jLabel53.setText("Tutorias dadas");
+
+        jLabel54.setText("Nivel de enseñanza");
+
+        btn_modT_r.setText("Regresar");
+        btn_modT_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_modT_rMouseClicked(evt);
+            }
+        });
+
+        btn_modT_ver.setText("Visualizar el seleccionado");
+        btn_modT_ver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_modT_verMouseClicked(evt);
+            }
+        });
+
+        btn_modT.setText("Modificar");
+        btn_modT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_modTMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_modTLayout = new javax.swing.GroupLayout(jd_modT.getContentPane());
+        jd_modT.getContentPane().setLayout(jd_modTLayout);
+        jd_modTLayout.setHorizontalGroup(
+            jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6)
+            .addGroup(jd_modTLayout.createSequentialGroup()
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel45)
+                    .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(tf_modT_carrera, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                        .addComponent(tf_modT_edad, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(tf_modT_nom, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel46)
+                    .addComponent(jLabel47))
+                .addGap(44, 44, 44)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel48)
+                    .addComponent(tf_modT_nat)
+                    .addComponent(jLabel49)
+                    .addComponent(jLabel50)
+                    .addComponent(tf_modT_num)
+                    .addComponent(tf_modT_user, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel53)
+                    .addComponent(jLabel52)
+                    .addGroup(jd_modTLayout.createSequentialGroup()
+                        .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tf_modT_dadas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(tf_modT_ganancias, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_modT_pw, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(46, 46, 46)
+                        .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel54)
+                            .addComponent(tf_modT_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jd_modTLayout.createSequentialGroup()
+                .addComponent(btn_modT_r)
+                .addGap(240, 240, 240)
+                .addComponent(btn_modT_ver)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                .addComponent(btn_modT))
+        );
+        jd_modTLayout.setVerticalGroup(
+            jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_modTLayout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(jLabel48)
+                    .addComponent(jLabel51)
+                    .addComponent(jLabel54))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modT_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_nat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_pw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_nivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(jLabel49)
+                    .addComponent(jLabel52))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modT_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_num, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_ganancias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(jLabel50)
+                    .addComponent(jLabel53))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_modT_carrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_modT_dadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGroup(jd_modTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_modT_r)
+                    .addComponent(btn_modT_ver)
+                    .addComponent(btn_modT)))
+        );
+
+        jt_listarT.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "NOmbre", "Edad", "Carrera", "Lugar de nacimiento", "Cuenta", "Usuario", "Contraseña", "Ganancias", "Tuturias dadas", "Nivel de enseñanza"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(jt_listarT);
+
+        btn_listarT_r.setText("Regresar");
+        btn_listarT_r.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_listarT_rMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_listarTLayout = new javax.swing.GroupLayout(jd_listarT.getContentPane());
+        jd_listarT.getContentPane().setLayout(jd_listarTLayout);
+        jd_listarTLayout.setHorizontalGroup(
+            jd_listarTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_listarTLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_listarTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_listarTLayout.createSequentialGroup()
+                        .addComponent(btn_listarT_r, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jd_listarTLayout.setVerticalGroup(
+            jd_listarTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_listarTLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addComponent(btn_listarT_r, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1534,10 +1781,10 @@ public class Principal extends javax.swing.JFrame {
         
         jd_tutor.setModal(false);
         jd_tutor.setVisible(false);
-        jd_modE_user.setModal(true);
-        jd_modE_user.pack();
-        jd_modE_user.setLocationRelativeTo(this);
-        jd_modE_user.setVisible(true);
+        jd_modE.setModal(true);
+        jd_modE.pack();
+        jd_modE.setLocationRelativeTo(this);
+        jd_modE.setVisible(true);
     }//GEN-LAST:event_jmi_modActionPerformed
 
     private void btn_vermodMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_vermodMouseClicked
@@ -1553,7 +1800,7 @@ public class Principal extends javax.swing.JFrame {
             tf_modE_user.setText(temp.getUsuario());
             tf_modE_pw.setText(Integer.toString(temp.getEdad()));
         }else
-            JOptionPane.showMessageDialog(jd_modE_user, "Seleccione uno de la tabla, para hacer esta opcion.");
+            JOptionPane.showMessageDialog(jd_modE, "Seleccione uno de la tabla, para hacer esta opcion.");
     }//GEN-LAST:event_btn_vermodMouseClicked
 
     private void btn_modEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modEMouseClicked
@@ -1588,8 +1835,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_modEMouseClicked
 
     private void btn_modE_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modE_rMouseClicked
-        jd_modE_user.setModal(false);
-        jd_modE_user.setVisible(false);
+        jd_modE.setModal(false);
+        jd_modE.setVisible(false);
        
         tf_modE_cono.setText("");
         tf_modE_carrera.setText("");
@@ -1606,6 +1853,139 @@ public class Principal extends javax.swing.JFrame {
         jd_tutor.setLocationRelativeTo(this);
         jd_tutor.setVisible(true);
     }//GEN-LAST:event_btn_modE_rMouseClicked
+
+    private void btn_listarT_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_listarT_rMouseClicked
+        jd_listarT.setModal(false);
+        jd_listarT.setVisible(false);
+        jd_tutor.setModal(true);
+        jd_tutor.pack();
+        jd_tutor.setLocationRelativeTo(this);
+        jd_tutor.setVisible(true);
+    }//GEN-LAST:event_btn_listarT_rMouseClicked
+
+    private void jmi_t_listarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_t_listarActionPerformed
+        DefaultTableModel table1 = (DefaultTableModel) jt_listarT.getModel();
+        for (int i = 0; i < estudiantes.size(); i++) {
+            Object[] newrow = {
+                tutor.get(i).getNombre(),
+                tutor.get(i).getEdad(),
+                tutor.get(i).getCarrera(),
+                tutor.get(i).getLugarnat(),
+                tutor.get(i).getNúmcuenta(),
+                tutor.get(i).getUsuario(),
+                tutor.get(i).getContraseña(),
+                tutor.get(i).getGanancias(),
+                tutor.get(i).getTutorías(),
+                tutor.get(i).getNivel(),
+            };
+            table1.addRow(newrow);
+        }
+        jt_listarT.setModel(table1);
+        
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
+        jd_listarT.setModal(true);
+        jd_listarT.pack();
+        jd_listarT.setLocationRelativeTo(this);
+        jd_listarT.setVisible(true);
+    }//GEN-LAST:event_jmi_t_listarActionPerformed
+
+    private void jmi_t_modActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_t_modActionPerformed
+        DefaultTableModel table1 = (DefaultTableModel) jt_listarT.getModel();
+        for (int i = 0; i < estudiantes.size(); i++) {
+            Object[] newrow = {
+                tutor.get(i).getNombre(),
+                tutor.get(i).getEdad(),
+                tutor.get(i).getCarrera(),
+                tutor.get(i).getLugarnat(),
+                tutor.get(i).getNúmcuenta(),
+                tutor.get(i).getUsuario(),
+                tutor.get(i).getContraseña(),
+                tutor.get(i).getGanancias(),
+                tutor.get(i).getTutorías(),
+                tutor.get(i).getNivel(),
+            };
+            table1.addRow(newrow);
+        }
+        jt_listarT.setModel(table1);
+        
+        jd_tutor.setModal(false);
+        jd_tutor.setVisible(false);
+        jd_modT.setModal(true);
+        jd_modT.pack();
+        jd_modT.setLocationRelativeTo(this);
+        jd_modT.setVisible(true);
+    }//GEN-LAST:event_jmi_t_modActionPerformed
+
+    private void btn_modT_verMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modT_verMouseClicked
+        if(jt_modT.getSelectedRow() >=0){
+            Tutor temp = tutor.get(jt_modT.getSelectedRow());
+            tf_modT_ganancias.setText(Integer.toString(temp.getGanancias()));
+            tf_modT_dadas.setText(Integer.toString(temp.getTutorías()));
+            tf_modT_carrera.setText(temp.getCarrera());
+            tf_modT_nat.setText(temp.getLugarnat());
+            tf_modT_nivel.setText(Integer.toString(temp.getNivel()));
+            tf_modT_nom.setText(temp.getNombre());
+            tf_modT_num.setText(Integer.toString(temp.getNúmcuenta()));
+            tf_modT_pw.setText(temp.getContraseña());
+            tf_modT_user.setText(temp.getUsuario());
+            tf_modT_pw.setText(Integer.toString(temp.getEdad()));
+        }else
+            JOptionPane.showMessageDialog(jd_modE, "Seleccione uno de la tabla, para hacer esta opcion.");
+    }//GEN-LAST:event_btn_modT_verMouseClicked
+
+    private void btn_modTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modTMouseClicked
+        tutor.get(jt_modT.getSelectedRow()).setNombre(tf_modE_nom.getText());
+        tutor.get(jt_modT.getSelectedRow()).setEdad(Integer.parseInt(tf_modE_edad.getText()));
+        tutor.get(jt_modT.getSelectedRow()).setCarrera(tf_modE_carrera.getText());
+        tutor.get(jt_modT.getSelectedRow()).setLugarnat(tf_modE_nat.getText());
+        tutor.get(jt_modT.getSelectedRow()).setNúmcuenta(Integer.parseInt(tf_modE_cuenta.getText()));
+        tutor.get(jt_modT.getSelectedRow()).setUsuario(tf_modE_user.getText());
+        tutor.get(jt_modT.getSelectedRow()).setContraseña(tf_modE_pw.getText());
+        tutor.get(jt_modT.getSelectedRow()).setGanancias(Integer.parseInt(tf_modT_ganancias.getText()));
+        tutor.get(jt_modT.getSelectedRow()).setNivel(Integer.parseInt(tf_modE_nivel.getText()));
+        tutor.get(jt_modT.getSelectedRow()).setTutorías(Integer.parseInt(tf_modT_dadas.getText()));
+        
+        jt_modT.removeAll();
+        DefaultTableModel table1 = (DefaultTableModel) jt_modT.getModel();
+        for (int i = 0; i < estudiantes.size(); i++) {
+            Object[] newrow = {
+                tutor.get(i).getNombre(),
+                tutor.get(i).getEdad(),
+                tutor.get(i).getCarrera(),
+                tutor.get(i).getLugarnat(),
+                tutor.get(i).getNúmcuenta(),
+                tutor.get(i).getUsuario(),
+                tutor.get(i).getContraseña(),
+                tutor.get(i).getGanancias(),
+                tutor.get(i).getTutorías(),
+                tutor.get(i).getNivel(),
+            };
+            table1.addRow(newrow);
+        }
+        jt_modT.setModel(table1);
+    }//GEN-LAST:event_btn_modTMouseClicked
+
+    private void btn_modT_rMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modT_rMouseClicked
+        jd_modT.setModal(false);
+        jd_modT.setVisible(false);
+       
+        tf_modT_ganancias.setText("");
+        tf_modT_dadas.setText("");
+        tf_modT_carrera.setText("");
+        tf_modT_nat.setText("");
+        tf_modT_nivel.setText("");
+        tf_modT_nom.setText("");
+        tf_modT_num.setText("");
+        tf_modT_pw.setText("");
+        tf_modT_user.setText("");
+        tf_modT_pw.setText("");
+
+        jd_tutor.setModal(true);
+        jd_tutor.pack();
+        jd_tutor.setLocationRelativeTo(this);
+        jd_tutor.setVisible(true);
+    }//GEN-LAST:event_btn_modT_rMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1655,9 +2035,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_ex_crear;
     private javax.swing.JButton btn_ex_r;
     private javax.swing.JButton btn_listarE_r;
+    private javax.swing.JButton btn_listarT_r;
     private javax.swing.JButton btn_login;
     private javax.swing.JButton btn_modE;
     private javax.swing.JButton btn_modE_r;
+    private javax.swing.JButton btn_modT;
+    private javax.swing.JButton btn_modT_r;
+    private javax.swing.JButton btn_modT_ver;
     private javax.swing.JButton btn_r_log;
     private javax.swing.JButton btn_reservar;
     private javax.swing.JButton btn_reservar_r;
@@ -1704,7 +2088,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1718,15 +2112,19 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JDialog jd_Cexamen;
     private javax.swing.JDialog jd_Ctutor;
     private javax.swing.JDialog jd_Ctutoria;
     private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_dartuto;
     private javax.swing.JDialog jd_estudiante;
+    private javax.swing.JDialog jd_listarT;
     private javax.swing.JDialog jd_listar_es;
     private javax.swing.JDialog jd_login;
-    private javax.swing.JDialog jd_modE_user;
+    private javax.swing.JDialog jd_modE;
+    private javax.swing.JDialog jd_modT;
     private javax.swing.JDialog jd_reservar;
     private javax.swing.JDialog jd_tutor;
     private javax.swing.JList<String> jl_dartutos;
@@ -1747,8 +2145,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_tutorias;
     private javax.swing.JSpinner js_e_edad;
     private javax.swing.JSpinner js_t_edad;
+    private javax.swing.JTable jt_listarT;
     private javax.swing.JTable jt_listar_es;
     private javax.swing.JTable jt_modE;
+    private javax.swing.JTable jt_modT;
     private javax.swing.JPasswordField pf_pass;
     private javax.swing.JTextField tf_e_carrera;
     private javax.swing.JTextField tf_e_conocimiento;
@@ -1771,6 +2171,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_modE_nom;
     private javax.swing.JTextField tf_modE_pw;
     private javax.swing.JTextField tf_modE_user;
+    private javax.swing.JTextField tf_modT_carrera;
+    private javax.swing.JTextField tf_modT_dadas;
+    private javax.swing.JTextField tf_modT_edad;
+    private javax.swing.JTextField tf_modT_ganancias;
+    private javax.swing.JTextField tf_modT_nat;
+    private javax.swing.JTextField tf_modT_nivel;
+    private javax.swing.JTextField tf_modT_nom;
+    private javax.swing.JTextField tf_modT_num;
+    private javax.swing.JTextField tf_modT_pw;
+    private javax.swing.JTextField tf_modT_user;
     private javax.swing.JTextField tf_t_carrera;
     private javax.swing.JTextField tf_t_dadas;
     private javax.swing.JTextField tf_t_ganancia;
